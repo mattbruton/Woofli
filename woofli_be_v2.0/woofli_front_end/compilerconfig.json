@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "content/styles/variables.css",
+    "inputFile": "content/styles/variables.scss"
+  },
+  {
+    "outputFile": "content/styles/bundle.css",
+    "inputFile": "content/styles/bundle.scss"
+  },
+  {
+    "outputFile": "content/styles/header.css",
+    "inputFile": "content/styles/header.scss"
+  }
+]

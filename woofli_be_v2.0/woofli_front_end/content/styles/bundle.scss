@@ -1,1 +1,12 @@
-﻿
+﻿@import "variables.scss";
+
+// Element Styles
+@import "header.scss";
+
+// Base Styling
+
+.content {
+    background-color: cadetblue;
+}
+
+// View Specific Styles

@@ -79,6 +79,24 @@
     <Content Include="content\bootstrap-reboot.min.css" />
     <Content Include="content\bootstrap.css" />
     <Content Include="content\bootstrap.min.css" />
+    <Content Include="content\styles\bundle.css">
+      <DependentUpon>bundle.scss</DependentUpon>
+    </Content>
+    <Content Include="content\styles\bundle.min.css">
+      <DependentUpon>bundle.css</DependentUpon>
+    </Content>
+    <Content Include="content\styles\header.css">
+      <DependentUpon>header.scss</DependentUpon>
+    </Content>
+    <Content Include="content\styles\header.min.css">
+      <DependentUpon>header.css</DependentUpon>
+    </Content>
+    <Content Include="content\styles\variables.css">
+      <DependentUpon>variables.scss</DependentUpon>
+    </Content>
+    <Content Include="content\styles\variables.min.css">
+      <DependentUpon>variables.css</DependentUpon>
+    </Content>
     <Content Include="packages.config" />
     <Content Include="content\bootstrap.min.css.map" />
     <Content Include="content\bootstrap.css.map" />
@@ -88,6 +106,13 @@
     <Content Include="content\bootstrap-grid.css.map" />
     <Content Include="content\bootstrap-flex.min.css.map" />
     <Content Include="content\bootstrap-flex.css.map" />
+    <Content Include="content\styles\bundle.scss" />
+    <Content Include="content\styles\variables.scss" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <Content Include="content\styles\header.scss" />
     <None Include="scripts\jquery-3.0.0.intellisense.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
@@ -887,9 +912,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="content\styles\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

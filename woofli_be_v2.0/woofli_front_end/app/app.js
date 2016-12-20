@@ -1,6 +1,6 @@
 ﻿var app = angular.module("App", ['ngRoute', 'LocalStorageModule']);
 
-app.config(function ($routeProvider) {
+app.config(function ($routeProvider, $locationProvider) {
 
     $routeProvider.when("/", {
         controller: "homeController",
@@ -18,6 +18,8 @@ app.config(function ($routeProvider) {
     });
 
     $routeProvider.otherwise({ redirectTo: "/" });
+
+    $locationProvider.html5Mode(true);
 });
 
 app.config(function ($httpProvider) {
