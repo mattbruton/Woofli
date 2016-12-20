@@ -15,11 +15,6 @@ namespace woofli_be_v2._0.DAL
 
         private UserManager<CustomUser> _userManager;
 
-        public AuthRepository(AuthContext _ctx)
-        {
-            _context = _ctx;
-            _userManager = new UserManager<CustomUser>(new UserStore<CustomUser>(_context));
-        }
         public AuthRepository()
         {
             _context = new AuthContext();

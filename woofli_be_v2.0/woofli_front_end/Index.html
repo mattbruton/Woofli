@@ -10,6 +10,19 @@
 	<base href="/">
 </head>
 <body class="content">
+	<nav data-ng-controller="indexController" class="navbar navbar-light bg-faded">
+		<ul class="nav float-xs-right navbar-nav">
+			<li data-ng-hide="authentication.isAuth" class="nav-item">
+				<a class="nav-link" href="/login">Login</a>
+			</li>
+			<li data-ng-hide="authentication.isAuth" class="nav-item">
+				<a class="nav-link" href="/signup">Sign Up</a>
+			</li>
+			<li data-ng-hide="!authentication.isAuth" class="nav-item">
+				<a data-ng-click="logOut()" class="nav-link" href="">Logout</a>
+			</li>
+		</ul>
+	</nav>
 	<div data-ng-view=""></div>
 	<!-- 3rd Party Scripts -->
 	<script src="scripts/angular.js"></script>
@@ -24,6 +37,7 @@
 	<!-- Angular Controllers -->
 	<script src="app/controllers/signupController.js"></script>
 	<script src="app/controllers/loginController.js"></script>
+	<script src="app/controllers/indexController.js"></script>
 	<script src="app/controllers/homeController.js"></script>
 </body>
 </html>
