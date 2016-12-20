@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "woofli_be_v2.0", "woofli_be_v2.0\woofli_be_v2.0.csproj", "{7BEE98B8-10C0-4EE1-9050-27AB81CF2A26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "woofli_be_v2.0.Tests", "woofli_be_v2.0.Tests\woofli_be_v2.0.Tests.csproj", "{7F79A283-6B23-4AD8-9C49-F8B5F73D668F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "woofli_front_end", "woofli_front_end\woofli_front_end.csproj", "{674F9FB9-2C43-40E4-96C4-518924CCF3BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7BEE98B8-10C0-4EE1-9050-27AB81CF2A26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BEE98B8-10C0-4EE1-9050-27AB81CF2A26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BEE98B8-10C0-4EE1-9050-27AB81CF2A26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BEE98B8-10C0-4EE1-9050-27AB81CF2A26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F79A283-6B23-4AD8-9C49-F8B5F73D668F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F79A283-6B23-4AD8-9C49-F8B5F73D668F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F79A283-6B23-4AD8-9C49-F8B5F73D668F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F79A283-6B23-4AD8-9C49-F8B5F73D668F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{674F9FB9-2C43-40E4-96C4-518924CCF3BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{674F9FB9-2C43-40E4-96C4-518924CCF3BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{674F9FB9-2C43-40E4-96C4-518924CCF3BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{674F9FB9-2C43-40E4-96C4-518924CCF3BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
