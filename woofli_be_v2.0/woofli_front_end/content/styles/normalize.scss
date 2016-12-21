@@ -13,6 +13,10 @@
     color: $light-font-color;
     border: 0;
     box-shadow: 0 4px 2px -2px gray;
+    &:hover {
+        background-color: $light-contrast-color;
+        color: $dark-font-color;
+    }
 }
 
 .btn--form-spacing {
