@@ -2,6 +2,13 @@
 
 .container {
 
+    &__form {
+
+        margin-top: 20vh;
+        @media #{$mobile-only} {
+        margin-top: 15vh;
+        }
+    }
 
     &--account-service {
         height: 300px;
