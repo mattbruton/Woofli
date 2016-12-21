@@ -34,9 +34,14 @@ namespace woofli_be_v2._0.Controllers
         }
 
         // GET api/<controller>/5
-        public string Get(int id)
+        [Authorize]
+        public Pet Get(int id)
         {
-            return "value";
+            if (_repo.GetAllPetsForUser(FindActiveUserName()).Any(p => p.PetId == id))
+            {
+                return _repo.GetPetById(id);
+            }
+            return null;
         }
 
         // POST api/<controller>
