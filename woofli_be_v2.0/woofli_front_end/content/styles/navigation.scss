@@ -1,0 +1,19 @@
+﻿@import "variables.scss";
+
+.navigation {
+    background-color: $background-color;
+
+    &__link {
+        color: $light-font-color;
+        font-family: $concert;
+        font-size: 1.25rem;
+        &:visited {
+            color: $light-font-color;
+        }
+        &:hover {
+            color: $contrast-color;
+            border-bottom: 3px solid $contrast-color;
+            margin-bottom: -3px;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+﻿@import "variables.scss";
+
+.content {
+    background-color: $background-color;
+}
+
+.text {
+    color: $background-color;
+}
+
+.btn-primary {
+    background-color: $contrast-color;
+    color: $light-font-color;
+    border: 0;
+    box-shadow: 0 4px 2px -2px gray;
+}

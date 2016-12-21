@@ -47,16 +47,19 @@ namespace woofli_be_v2._0.Controllers
         // POST api/<controller>
         public void Post([FromBody]string value)
         {
+            //NYI
         }
 
         // PUT api/<controller>/5
         public void Put(int id, [FromBody]string value)
         {
+            //NYI
         }
 
         // DELETE api/<controller>/5
         public void Delete(int id)
         {
+            //NYI
         }
     }
 }

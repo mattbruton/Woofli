@@ -13,16 +13,16 @@
 </head>
 <body class="content">
 	<!-- Navigation -->
-	<nav data-ng-controller="indexController" class="navbar navbar-light bg-faded">
+	<nav data-ng-controller="indexController" class="navbar navigation">
 		<ul class="nav float-xs-right navbar-nav">
 			<li data-ng-hide="authentication.isAuth" class="nav-item">
-				<a class="nav-link" href="/login">Login</a>
+				<a class="nav-link navigation__link" href="/login">Login</a>
 			</li>
 			<li data-ng-hide="authentication.isAuth" class="nav-item">
-				<a class="nav-link" href="/signup">Sign Up</a>
+				<a class="nav-link navigation__link" href="/signup">Sign Up</a>
 			</li>
 			<li data-ng-hide="!authentication.isAuth" class="nav-item">
-				<a data-ng-click="logOut()" class="nav-link" href="">Logout</a>
+				<a data-ng-click="logOut()" class="nav-link navigation__link" href="">Logout</a>
 			</li>
 		</ul>
 	</nav>

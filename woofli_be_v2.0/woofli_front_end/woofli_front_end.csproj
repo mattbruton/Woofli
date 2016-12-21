@@ -86,11 +86,29 @@
     <Content Include="content\styles\bundle.min.css">
       <DependentUpon>bundle.css</DependentUpon>
     </Content>
+    <Content Include="content\styles\container.css">
+      <DependentUpon>container.scss</DependentUpon>
+    </Content>
+    <Content Include="content\styles\container.min.css">
+      <DependentUpon>container.css</DependentUpon>
+    </Content>
     <Content Include="content\styles\header.css">
       <DependentUpon>header.scss</DependentUpon>
     </Content>
     <Content Include="content\styles\header.min.css">
       <DependentUpon>header.css</DependentUpon>
+    </Content>
+    <Content Include="content\styles\navigation.css">
+      <DependentUpon>navigation.scss</DependentUpon>
+    </Content>
+    <Content Include="content\styles\navigation.min.css">
+      <DependentUpon>navigation.css</DependentUpon>
+    </Content>
+    <Content Include="content\styles\normalize.css">
+      <DependentUpon>normalize.scss</DependentUpon>
+    </Content>
+    <Content Include="content\styles\normalize.min.css">
+      <DependentUpon>normalize.css</DependentUpon>
     </Content>
     <Content Include="content\styles\variables.css">
       <DependentUpon>variables.scss</DependentUpon>
@@ -115,6 +133,8 @@
     </None>
     <Content Include="content\styles\header.scss" />
     <Content Include="content\styles\container.scss" />
+    <Content Include="content\styles\navigation.scss" />
+    <Content Include="content\styles\normalize.scss" />
     <None Include="scripts\jquery-3.0.0.intellisense.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />

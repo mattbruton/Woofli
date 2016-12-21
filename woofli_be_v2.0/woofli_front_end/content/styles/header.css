@@ -1,7 +1,10 @@
 ﻿.header {
-  color: cadetblue; }
+  font-family: "Concert One";
+  margin-top: 70px;
+  color: #333333; }
   .header--home {
+    margin-top: 7.5vh;
     color: #fff;
     font-family: "Concert One";
-    font-size: 6rem; }
+    font-size: 8rem; }
 

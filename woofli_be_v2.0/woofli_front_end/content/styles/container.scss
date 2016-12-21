@@ -2,10 +2,13 @@
 
 .container {
     &--account-service {
-        color: cadetblue;
         background-color: $light-font-color;
-        border: 3px solid $light-font-color;
-        border-radius: 5px;
+        border: 3px solid $contrast-color;
+        min-height: 300px;
+        max-width: 300px;
+        margin-top: 7.5vh;
+        margin-left: 0vw;
+        border-radius: 50%;
         box-shadow: 0 4px 2px -2px gray;
     }
 }

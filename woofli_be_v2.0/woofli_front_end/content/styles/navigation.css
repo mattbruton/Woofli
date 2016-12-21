@@ -1,0 +1,13 @@
+﻿.navigation {
+  background-color: cadetblue; }
+  .navigation__link {
+    color: #fff;
+    font-family: "Concert One";
+    font-size: 1.25rem; }
+    .navigation__link:visited {
+      color: #fff; }
+    .navigation__link:hover {
+      color: #FF8C00;
+      border-bottom: 3px solid #FF8C00;
+      margin-bottom: -3px; }
+

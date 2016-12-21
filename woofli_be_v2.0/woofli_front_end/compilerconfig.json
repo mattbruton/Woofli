@@ -10,5 +10,17 @@
   {
     "outputFile": "content/styles/header.css",
     "inputFile": "content/styles/header.scss"
+  },
+  {
+    "outputFile": "content/styles/container.css",
+    "inputFile": "content/styles/container.scss"
+  },
+  {
+    "outputFile": "content/styles/navigation.css",
+    "inputFile": "content/styles/navigation.scss"
+  },
+  {
+    "outputFile": "content/styles/normalize.css",
+    "inputFile": "content/styles/normalize.scss"
   }
 ]
