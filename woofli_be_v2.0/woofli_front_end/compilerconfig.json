@@ -22,5 +22,9 @@
   {
     "outputFile": "content/styles/normalize.css",
     "inputFile": "content/styles/normalize.scss"
+  },
+  {
+    "outputFile": "content/styles/input.css",
+    "inputFile": "content/styles/input.scss"
   }
 ]

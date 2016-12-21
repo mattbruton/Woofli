@@ -10,6 +10,9 @@
   border: 0;
   box-shadow: 0 4px 2px -2px gray; }
 
+.btn--form-spacing {
+  margin-top: 2vh; }
+
 .header {
   font-family: "Concert One";
   margin-top: 70px;
@@ -27,6 +30,12 @@
     color: #fff;
     font-family: "Concert One";
     font-size: 8rem; }
+
+.container__form {
+  margin-top: 20vh; }
+  @media only screen and (max-width: 767px) {
+    .container__form {
+      margin-top: 15vh; } }
 
 .container--account-service {
   height: 300px;
