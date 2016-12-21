@@ -114,6 +114,7 @@
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
     <Content Include="content\styles\header.scss" />
+    <Content Include="content\styles\container.scss" />
     <None Include="scripts\jquery-3.0.0.intellisense.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />

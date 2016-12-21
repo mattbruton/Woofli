@@ -15,6 +15,11 @@ namespace woofli_be_v2._0.DAL
 
         private UserManager<CustomUser> _userManager;
 
+        public AuthRepository(AuthContext _ctx)
+        {
+            _context = _ctx;
+            _userManager = new UserManager<CustomUser>(new UserStore<CustomUser>(_ctx));
+        }
         public AuthRepository()
         {
             _context = new AuthContext();
@@ -49,6 +54,11 @@ namespace woofli_be_v2._0.DAL
         public List<Pet> GetAllPetsForUser(string username)
         {
             return _context.Pets.Where(p => p.Owner.UserName == username).ToList();
+        }
+
+        public Pet GetPetById(int _id)
+        {
+            return _context.Pets.SingleOrDefault(p => p.PetId == _id);
         }
     }
 }

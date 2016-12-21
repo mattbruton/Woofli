@@ -2,11 +2,25 @@
 
 // Element Styles
 @import "header.scss";
+@import "container.scss";
 
 // Base Styling
 
 .content {
     background-color: cadetblue;
+}
+
+.text {
+    color: cadetblue;
+}
+
+
+
+.btn-primary {
+    background-color: cadetblue;
+    color: $light-font-color;
+    border: 0;
+    box-shadow: 0 4px 2px -2px gray;
 }
 
 // View Specific Styles

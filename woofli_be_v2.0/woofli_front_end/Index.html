@@ -3,13 +3,16 @@
 <head>
 	<title>woof.li</title>
 	<meta charset="utf-8" />
+	<!-- Third Party Stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
 	<link href="content/bootstrap.min.css" rel="stylesheet" />
+	<!-- Site Specific Stylesheets -->
 	<link href="content/styles/bundle.min.css" rel="stylesheet" />
-
+	<!-- Removing ugly hash in URL -->
 	<base href="/">
 </head>
 <body class="content">
+	<!-- Navigation -->
 	<nav data-ng-controller="indexController" class="navbar navbar-light bg-faded">
 		<ul class="nav float-xs-right navbar-nav">
 			<li data-ng-hide="authentication.isAuth" class="nav-item">
@@ -23,7 +26,9 @@
 			</li>
 		</ul>
 	</nav>
+	<!-- Primary Content for Page Loaded Here -->
 	<div data-ng-view=""></div>
+	<!-- Footer -->
 	<!-- 3rd Party Scripts -->
 	<script src="scripts/angular.js"></script>
 	<script src="scripts/angular-route.js"></script>

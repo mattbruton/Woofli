@@ -1,0 +1,11 @@
+﻿@import "variables.scss";
+
+.container {
+    &--account-service {
+        color: cadetblue;
+        background-color: $light-font-color;
+        border: 3px solid $light-font-color;
+        border-radius: 5px;
+        box-shadow: 0 4px 2px -2px gray;
+    }
+}
