@@ -5,6 +5,16 @@
     margin-top: 70px;
     color: $dark-font-color;
 
+    &--login {
+        font-family: $concert;
+        color: $light-font-color;
+        margin-top: 7.5vh;
+        margin-bottom: 3vh;
+        border-bottom: solid 2px $light-font-color;
+        display: inline;
+        padding-bottom: 3px;
+    }
+
     &--home {
         margin-top: 7.5vh;
         color: $light-font-color;
