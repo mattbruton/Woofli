@@ -98,6 +98,12 @@
     <Content Include="content\styles\header.min.css">
       <DependentUpon>header.css</DependentUpon>
     </Content>
+    <Content Include="content\styles\input.css">
+      <DependentUpon>input.scss</DependentUpon>
+    </Content>
+    <Content Include="content\styles\input.min.css">
+      <DependentUpon>input.css</DependentUpon>
+    </Content>
     <Content Include="content\styles\navigation.css">
       <DependentUpon>navigation.scss</DependentUpon>
     </Content>
@@ -135,6 +141,7 @@
     <Content Include="content\styles\container.scss" />
     <Content Include="content\styles\navigation.scss" />
     <Content Include="content\styles\normalize.scss" />
+    <Content Include="content\styles\input.scss" />
     <None Include="scripts\jquery-3.0.0.intellisense.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
