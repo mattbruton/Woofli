@@ -61,7 +61,8 @@
 
 .input {
   margin-top: 1rem;
-  padding: 1.5rem .75rem; }
+  padding: 1.5rem .75rem;
+  box-shadow: 0 4px 2px -2px gray; }
 
 .navigation {
   background-color: cadetblue; }
