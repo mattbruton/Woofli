@@ -2,6 +2,12 @@
 app.controller('accountController', ['$scope', '$location', 'authService', 'petService', function ($scope, $location, authService, petService) {
 
     $scope.userPets = [];
+    $scope.userPetsitters = [];
+
+    $scope.addNewPetsitter = function () {
+
+        $location.path = "/add-petsitter";
+    };
 
     $scope.addNewPet = function () {
 
