@@ -17,6 +17,11 @@ app.config(function ($routeProvider, $locationProvider) {
         templateUrl: "/app/partials/signup.html"
     });
 
+    $routeProvider.when("/account", {
+        controller: "accountController",
+        templateUrl: "/app/partials/account-main.html"
+    });
+
     $routeProvider.otherwise({ redirectTo: "/" });
 
     $locationProvider.html5Mode(true);
@@ -25,3 +30,7 @@ app.config(function ($routeProvider, $locationProvider) {
 app.config(function ($httpProvider) {
     $httpProvider.interceptors.push('authInterceptorService');
 });
+
+app.run(['authService', function (authService) {
+    authService.fillAuthData();
+}]);
