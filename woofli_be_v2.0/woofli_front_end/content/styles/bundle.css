@@ -23,6 +23,12 @@
   font-family: "Concert One";
   margin-top: 70px;
   color: #333333; }
+  .header--profile {
+    color: #fff;
+    font-family: "Concert One";
+    border-bottom: solid 2px #fff;
+    display: inline;
+    padding-bottom: 3px; }
   .header--login {
     font-family: "Concert One";
     color: #fff;
@@ -42,6 +48,22 @@
   @media only screen and (max-width: 767px) {
     .container__form {
       margin-top: 15vh; } }
+
+.container--pet {
+  background-color: #fff;
+  color: #333333;
+  box-shadow: 0 4px 2px -2px gray;
+  min-height: 300px;
+  border-radius: 10px; }
+
+.container--pet-profiles {
+  margin-top: 4vh;
+  background-color: cadetblue;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  padding: 15px;
+  height: auto;
+  overflow: auto; }
 
 .container--account-service {
   height: 300px;

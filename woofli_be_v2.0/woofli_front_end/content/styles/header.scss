@@ -5,6 +5,14 @@
     margin-top: 70px;
     color: $dark-font-color;
 
+    &--profile {
+        color: $light-font-color;
+        font-family: $concert;
+        border-bottom: solid 2px $light-font-color;
+        display: inline;
+        padding-bottom: 3px;
+    }
+
     &--login {
         font-family: $concert;
         color: $light-font-color;

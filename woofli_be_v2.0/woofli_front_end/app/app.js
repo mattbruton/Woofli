@@ -22,6 +22,11 @@ app.config(function ($routeProvider, $locationProvider) {
         templateUrl: "/app/partials/account-main.html"
     });
 
+    $routeProvider.when("/add-pet", {
+        controller: "accountController",
+        templateUrl: "/app/partials/add-pet.html"
+    });
+
     $routeProvider.otherwise({ redirectTo: "/" });
 
     $locationProvider.html5Mode(true);
