@@ -137,7 +137,7 @@ namespace woofli_be_v2._0.Tests.DAL
             Pet pet1 = new Pet { PetId = 1, Name = "testdog", PrimaryVet = vet1, Medications = new List<Medicine> { medicine_to_add } };
             Pet pet2 = new Pet { PetId = 2, Name = "testcat", PrimaryVet = vet2 };
 
-            CustomUser testPerson = new CustomUser { Id = "abc", UserName = "test123", Pets = new List<Pet> { pet1, pet2 } };
+            CustomUser testPerson = new CustomUser { Id = "abc", UserName = "test123", Petsitters = new List<Petsitter> { testsitter_2 }, Pets = new List<Pet> { pet1, pet2 } };
             // Little hacky, but can't set the owner on the pet until the Owner exists.
 
             pet1.Owner = testPerson;
@@ -182,6 +182,23 @@ namespace woofli_be_v2._0.Tests.DAL
         {
             IncludeMockData();
             Assert.IsNull(repo.GetPetById(5));
+        }
+
+        [TestMethod]
+        public void RepoEnsureReturnPetsittersForUser()
+        {
+            IncludeMockData();
+            Assert.IsTrue(repo.GetAllPetsittersForUser("test123").Count == 1);
+        }
+
+        [TestMethod]
+        public void RepoEnsureCanAddPetsitterToUserListOfSitters()
+        {
+            IncludeMockData();
+            Petsitter sitter_to_add = new Petsitter { FirstName = "Ronald", LastName = "McDonald" };
+            repo.AddPetsitterToUser("test123", sitter_to_add);
+
+            Assert.IsTrue(repo.GetAllPetsittersForUser("test123").Count == 2);
         }
     }
 }

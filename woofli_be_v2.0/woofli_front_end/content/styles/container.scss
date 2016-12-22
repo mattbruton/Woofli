@@ -10,6 +10,23 @@
         }
     }
 
+    &--pet {
+        background-color: $light-font-color;
+        color: $dark-font-color;
+        box-shadow: 0 4px 2px -2px gray;
+        min-height: 300px;
+        border-radius: 10px;
+    }
+
+    &--pet-profiles {
+        margin-top: 4vh;
+        background-color: $background-color;
+        border: 3px solid $light-font-color;
+        border-radius: 10px;
+        padding: 15px;
+        height:auto; overflow:auto
+    }
+
     &--account-service {
         height: 300px;
         max-width: 300px;

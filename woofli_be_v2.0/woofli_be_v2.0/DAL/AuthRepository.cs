@@ -38,6 +38,18 @@ namespace woofli_be_v2._0.DAL
             return result;
         }
 
+        public List<Petsitter> GetAllPetsittersForUser(string username)
+        {
+            CustomUser user = _context.Users.SingleOrDefault(u => u.UserName == username);
+            return user.Petsitters;
+        }
+
+        public void AddPetsitterToUser(string username, Petsitter petsitter)
+        {
+            CustomUser user = _context.Users.SingleOrDefault(u => u.UserName == username);
+            user.Petsitters.Add(petsitter);
+        }
+
         public async Task<CustomUser> FindUser(string userName, string password)
         {
             CustomUser user = await _userManager.FindAsync(userName, password);

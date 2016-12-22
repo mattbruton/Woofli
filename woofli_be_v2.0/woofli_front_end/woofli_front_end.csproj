@@ -66,12 +66,17 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\controllers\accountController.js" />
     <Content Include="app\controllers\homeController.js" />
     <Content Include="app\controllers\indexController.js" />
     <Content Include="app\controllers\loginController.js" />
+    <Content Include="app\partials\account-main.html" />
+    <Content Include="app\partials\add-pet.html" />
+    <Content Include="app\partials\add-petsitter.html" />
     <Content Include="app\partials\home.html" />
     <Content Include="app\partials\login.html" />
     <Content Include="app\services\petService.js" />
+    <Content Include="app\services\petsitterService.js" />
     <Content Include="content\bootstrap-flex.css" />
     <Content Include="content\bootstrap-flex.min.css" />
     <Content Include="content\bootstrap-grid.css" />

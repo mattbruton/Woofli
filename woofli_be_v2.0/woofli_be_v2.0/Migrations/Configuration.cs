@@ -19,6 +19,13 @@ namespace woofli_be_v2._0.Migrations
                 p => p.Name,
                 new Pet { Name = "Lunchbox", BirthDate = DateTime.Now, Owner = context.Users.FirstOrDefault(u => u.UserName == "Matt") }
                 );
+
+            context.Petsitters.AddOrUpdate(
+                p => p.FirstName,
+                new Petsitter { FirstName = "Test", LastName = "Person", Email = "test@test.com", Phone = "555-555-5555"}
+                );
+
+
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
