@@ -7,6 +7,7 @@ using System.Security.Claims;
 using System.Web.Http;
 using woofli_be_v2._0.DAL;
 using woofli_be_v2._0.Models;
+using static woofli_be_v2._0.Models.WoofliViewModels;
 
 namespace woofli_be_v2._0.Controllers
 {
@@ -38,13 +39,42 @@ namespace woofli_be_v2._0.Controllers
             return "value";
         }
 
+        [Authorize]
         // POST api/<controller>
-        public void Post([FromBody]string value)
+        public Dictionary<string, bool> Post([FromBody]PetsitterViewModel value)
         {
+            Dictionary<string, bool> answer = new Dictionary<string, bool>();
+
+            if (ModelState.IsValid)
+            {
+                string user_name = FindActiveUserName();
+
+                if (user_name != null)
+                {
+                    Petsitter new_sitter = new Petsitter
+                    {
+                        FirstName = value.FirstName,
+                        LastName = value.LastName,
+                        Phone = value.Phone,
+                        Email = value.Email
+                    };
+                    _repo.AddPetsitterToUser(user_name, new_sitter);
+                    answer.Add("successful", true);
+                }
+                else
+                {
+                    answer.Add("successful", false);
+                }
+            }
+            else
+            {
+                answer.Add("successful", false);
+            }
+            return answer;
         }
 
         // PUT api/<controller>/5
-        public void Put(int id, [FromBody]string value)
+        public void Put([FromBody]PetsitterViewModel value)
         {
         }
 
