@@ -46,8 +46,9 @@ namespace woofli_be_v2._0.DAL
 
         public void AddPetsitterToUser(string username, Petsitter petsitter)
         {
-            CustomUser user = _context.Users.SingleOrDefault(u => u.UserName == username);
-            user.Petsitters.Add(petsitter);
+            _context.Users.SingleOrDefault(u => u.UserName == username).Petsitters.Add(petsitter);
+            _context.SaveChanges();
+
         }
 
         public async Task<CustomUser> FindUser(string userName, string password)
