@@ -24,6 +24,10 @@ namespace woofli_be_v2._0.Models
         {
             [Required]
             public string Name { get; set; }
+            [Required]
+            public bool IsCanine { get; set; }
+            [Required]
+            public string ImageUrl { get; set; }
         }
     }
 }

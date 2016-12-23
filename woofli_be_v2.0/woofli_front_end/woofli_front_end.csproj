@@ -87,6 +87,8 @@
     <Content Include="content\bootstrap-reboot.min.css" />
     <Content Include="content\bootstrap.css" />
     <Content Include="content\bootstrap.min.css" />
+    <Content Include="content\images\barking-dog-512.png" />
+    <Content Include="content\images\cat-icon.png" />
     <Content Include="content\styles\bundle.css">
       <DependentUpon>bundle.scss</DependentUpon>
     </Content>

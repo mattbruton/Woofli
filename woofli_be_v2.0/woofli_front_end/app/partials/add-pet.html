@@ -1,12 +1,28 @@
-﻿<div>
-    <form class="form-login" role="form">
-        <input type="text" class="form-control input" placeholder="First Name" data-ng-model="newPet.Name" required autofocus>
-        <input type="text" class="form-control input" placeholder="Last Name" data-ng-model="newPet.LastName" required>
-        <input type="text" class="form-control input" placeholder="Phone" data-ng-model="newPet.Phone" required>
-        <input type="text" class="form-control input" placeholder="Email" data-ng-model="newPet.Email" required>
+﻿<div class="container container__form">
 
-        <div class="text-xs-center btn--form-spacing">
-            <button class="btn btn-lg btn-primary" type="submit" data-ng-click="addNewPet(newPet)">Add Pet</button>
-        </div>
-    </form>
+    <div class="col-md-6 push-md-3">
+        <h1 class="form-login-heading header--login">Add a Pet</h1>
+
+        <form class="form-login" role="form">
+            <input type="text" class="form-control input" placeholder="Pet's Name" data-ng-model="newPet.Name" required autofocus>
+
+            <fieldset class="form-group">
+                <legend>Select a pet type:</legend>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" data-ng-model="newPet.IsCanine" value="true" id="dogRadio">
+                        Dog
+                    </label>
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" data-ng-model="newPet.IsCanine" value="false" id="catRadio">
+                        Cat
+                    </label>
+                </div>
+            </fieldset>
+
+            <div class="text-xs-center btn--form-spacing">
+                <button class="btn btn-lg btn-primary" type="submit" data-ng-click="addNewPet(newPet)">Add Pet</button>
+            </div>
+        </form>
+    </div>
 </div>

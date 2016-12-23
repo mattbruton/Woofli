@@ -59,6 +59,8 @@ namespace woofli_be_v2._0.Controllers
                     Pet new_pet = new Pet
                     {
                         Name = value.Name,
+                        IsCanine = value.IsCanine,
+                        ImageUrl = value.ImageUrl,
                         BirthDate = DateTime.Now 
                     };
                     _repo.AddPetToUser(user_name, new_pet);
