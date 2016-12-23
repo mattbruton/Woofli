@@ -38,6 +38,11 @@
         height:auto; overflow:auto
     }
 
+    &--icon {
+        padding-left: 2vw;
+        padding-top: 0.75vh;
+    }
+
     &--account-service {
         height: 300px;
         max-width: 300px;

@@ -79,6 +79,10 @@
   height: auto;
   overflow: auto; }
 
+.container--icon {
+  padding-left: 2vw;
+  padding-top: 0.75vh; }
+
 .container--account-service {
   height: 300px;
   max-width: 300px;
@@ -102,6 +106,11 @@
 
 .image {
   max-width: 50%; }
+
+.icon--add {
+  font-size: 1.5rem;
+  padding-top: .75vh;
+  color: #fff; }
 
 .navigation {
   background-color: cadetblue; }

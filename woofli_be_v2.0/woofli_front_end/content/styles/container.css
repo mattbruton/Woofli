@@ -30,6 +30,10 @@
   height: auto;
   overflow: auto; }
 
+.container--icon {
+  padding-left: 2vw;
+  padding-top: 0.75vh; }
+
 .container--account-service {
   height: 300px;
   max-width: 300px;
