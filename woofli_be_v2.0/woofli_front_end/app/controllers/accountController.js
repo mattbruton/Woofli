@@ -16,24 +16,34 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'petS
 
     $scope.addNewPetsitter = function (newPetsitter) {
         petsitterService.addNewPetsitter($scope.newPetsitter);
+        $scope.updatePetsitterList();
         $location.path('/account');
     };
 
     $scope.addNewPet = function (newPet) {
         petService.addNewPet($scope.newPet);
+        $scope.updatePetList();
         $location.path('/account');
     };
 
-    petsitterService.getPetsitters().then(function (results) {
-        $scope.userPetsitters = angular.copy(results.data);
-    }, function (error) {
-        console.log(error);
-    });
+    $scope.updatePetsitterList = function () {
+        petsitterService.getPetsitters().then(function (results) {
+            $scope.userPetsitters.length = 0;
+            $scope.userPetsitters = angular.copy(results.data);
+        }, function (error) {
+            console.log(error);
+        });
+    };
 
-    petService.getPets().then(function (results) {
-        $scope.userPets = angular.copy(results.data);
-    }, function (error) {
-        console.log(error);
-    });
+    $scope.updatePetList = function () {
+        petService.getPets().then(function (results) {
+            $scope.userPets.length = 0;
+            $scope.userPets = angular.copy(results.data);
+        }, function (error) {
+            console.log(error);
+        });
+    };
 
+    $scope.updatePetsitterList();
+    $scope.updatePetList();
 }]);

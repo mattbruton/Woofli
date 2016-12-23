@@ -18,7 +18,12 @@ namespace woofli_be_v2._0.Models
             public string Phone { get; set; }
             [Required]
             public string Email { get; set; }
+        }
 
+        public class AddPetViewModel
+        {
+            [Required]
+            public string Name { get; set; }
         }
     }
 }

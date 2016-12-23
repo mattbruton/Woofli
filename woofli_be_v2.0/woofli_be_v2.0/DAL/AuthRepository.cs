@@ -48,7 +48,6 @@ namespace woofli_be_v2._0.DAL
         {
             _context.Users.SingleOrDefault(u => u.UserName == username).Petsitters.Add(petsitter);
             _context.SaveChanges();
-
         }
 
         public async Task<CustomUser> FindUser(string userName, string password)
@@ -72,6 +71,12 @@ namespace woofli_be_v2._0.DAL
         public Pet GetPetById(int _id)
         {
             return _context.Pets.SingleOrDefault(p => p.PetId == _id);
+        }
+
+        public void AddPetToUser(string username, Pet pet)
+        {
+            _context.Users.SingleOrDefault(u => u.UserName == username).Pets.Add(pet);
+            _context.SaveChanges();
         }
     }
 }
