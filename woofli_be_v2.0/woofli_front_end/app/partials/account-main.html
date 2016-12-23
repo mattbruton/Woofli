@@ -3,7 +3,7 @@
     <div class="container--pet-profiles">
         <div data-ng-repeat="pet in userPets" class="col-xs-10 push-xs-1 col-md-4 container--pet">
             <h2>{{pet.name}}</h2>
-            <button class="btn btn-primary">{{pet.petId}}</button>
+            <button class="btn btn-primary" data-ng-click="goToTargetPetView(pet.petId)">{{pet.petId}}</button>
         </div>
         <div class="col-xs-10 push-xs-1 col-md-4">
             <p>Add a pet</p>

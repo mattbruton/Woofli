@@ -5,34 +5,25 @@ app.config(function ($routeProvider, $locationProvider) {
     $routeProvider.when("/", {
         controller: "homeController",
         templateUrl: "/app/partials/home.html"
-    });
-
-    $routeProvider.when("/login", {
+    }).when("/login", {
         controller: "loginController",
         templateUrl: "/app/partials/login.html"
-    });
-
-    $routeProvider.when("/signup", {
+    }).when("/signup", {
         controller: "signupController",
         templateUrl: "/app/partials/signup.html"
-    });
-
-    $routeProvider.when("/account", {
+    }).when("/account", {
         controller: "accountController",
         templateUrl: "/app/partials/account-main.html"
-    });
-
-    $routeProvider.when("/add-pet", {
+    }).when("/add-pet", {
         controller: "accountController",
         templateUrl: "/app/partials/add-pet.html"
-    });
-
-    $routeProvider.when("/add-petsitter", {
+    }).when("/add-petsitter", {
         controller: "accountController",
         templateUrl: "/app/partials/add-petsitter.html"
-    });
-
-    $routeProvider.otherwise({ redirectTo: "/" });
+    }).when('/pet/:id', {
+        controller: "accountController",
+        templateUrl: "/app/partials/pet.html"
+    }).otherwise({ redirectTo: "/" });
 
     $locationProvider.html5Mode(true);
 });

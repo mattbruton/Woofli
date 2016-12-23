@@ -1,10 +1,20 @@
 ﻿'use strict';
-app.controller('accountController', ['$scope', '$location', 'authService', 'petService', 'petsitterService', function ($scope, $location, authService, petService, petsitterService) {
+app.controller('accountController', ['$scope', '$location', 'authService', 'petService', 'petsitterService', '$rootScope', function ($scope, $location, authService, petService, petsitterService, $rootScope) {
 
     $scope.userPets = [];
     $scope.userPetsitters = [];
+
+    $scope.targetPet = {};
+    $scope.targetPetsitter = {};
+
     $scope.newPet = {};
     $scope.newPetsitter = {};
+
+    $scope.id = $rootScope.id;
+
+    $scope.backToAccount = function () {
+        $location.path('/account');
+    };
 
     $scope.goToNewPetsitterView = function () {
         $location.path("/add-petsitter");
@@ -12,6 +22,18 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'petS
 
     $scope.goToNewPetView = function () {
         $location.path("/add-pet");
+    };
+
+    $scope.goToTargetPetView = function (id) {
+        $rootScope.id = id;
+        $location.path(`/pet/${id}`);
+    }
+
+    $scope.viewTargetPet = function (id) {
+        petService.getSinglePet(id).then(function (results) {
+            $scope.targetPet = results.data;
+            console.log($scope.targetPet);
+        });
     };
 
     $scope.addNewPetsitter = function (newPetsitter) {
@@ -24,7 +46,7 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'petS
         petService.addNewPet($scope.newPet);
         $scope.updatePetList();
         $location.path('/account');
-    };
+    }; 
 
     $scope.updatePetsitterList = function () {
         petsitterService.getPetsitters().then(function (results) {
