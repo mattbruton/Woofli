@@ -11,7 +11,15 @@ app.factory('petsitterService', ['$http', function ($http) {
         });
     };
 
-    petServiceFactory.getPetsitters = _getPetsitters;
+    var _addNewPetsitter = function (petsitter) {
+        var data = petsitter;
+        $http.post(serviceBase + 'api/petsitter', data).then(function (results) {
+            console.log(results);
+        });
+    };
+
+    petsitterServiceFactory.getPetsitters = _getPetsitters;
+    petsitterServiceFactory.addNewPetsitter = _addNewPetsitter;
 
     return petsitterServiceFactory;
 

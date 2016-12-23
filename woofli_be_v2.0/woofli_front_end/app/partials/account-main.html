@@ -1,33 +1,25 @@
 ﻿<div class="container">
     <h1 class="header--profile">Pet Profiles</h1>
     <div class="container--pet-profiles">
-        <!--<div class="col-xs-12"> -->
-            <!--<div data-ng-repeat="pet in userPets">-->
-                <div data-ng-repeat="pet in userPets" class="col-xs-10 push-xs-1 col-md-4 container--pet">
-                    <h2>{{pet.name}}</h2>
-                    <button class="btn btn-primary">{{pet.petId}}</button>
-                </div>
-                <div class="col-xs-10 push-xs-1 col-md-4">
-                    <p>Add a pet</p>
-                    <button data-ng-click="addNewPet()"></button>
-                </div>
-            <!--</div>-->
-        <!--</div> -->
+        <div data-ng-repeat="pet in userPets" class="col-xs-10 push-xs-1 col-md-4 container--pet">
+            <h2>{{pet.name}}</h2>
+            <button class="btn btn-primary">{{pet.petId}}</button>
+        </div>
+        <div class="col-xs-10 push-xs-1 col-md-4">
+            <p>Add a pet</p>
+            <button data-ng-click="goToNewPetView()"></button>
+        </div>
     </div>
 
     <h1 class="header--profile">Petsitters</h1>
     <div class="container--pet-profiles">
-        <!--<div class="col-xs-12"> -->
-        <!--<div data-ng-repeat="pet in userPets">-->
         <div data-ng-repeat="petsitter in userPetsitters" class="col-xs-10 push-xs-1 col-md-4 container--pet">
             <h2>{{petsitter.firstname}} {{petsitter.lastname}}</h2>
             <button class="btn btn-primary">{{pet.petId}}</button>
         </div>
         <div class="col-xs-10 push-xs-1 col-md-4">
             <p>Add a pet</p>
-            <button data-ng-click="addNewPetsitter()"></button>
+            <button data-ng-click="goToNewPetsitterView()">Add a sitter.</button>
         </div>
-        <!--</div>-->
-        <!--</div> -->
     </div>
 </div>

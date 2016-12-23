@@ -160,6 +160,7 @@
     <Compile Include="Models\SitterAppointment.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Models\Veterinarian.cs" />
+    <Compile Include="Models\WoofliViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\SimpleAuthorizationServerProvider.cs" />
     <Compile Include="Startup.cs" />
