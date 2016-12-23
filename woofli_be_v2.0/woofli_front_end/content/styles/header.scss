@@ -13,6 +13,12 @@
         padding-bottom: 3px;
     }
 
+    &--profile-card {
+        padding-top: 0.75vh;
+        color: $light-font-color;
+        font-family: $concert;
+    }
+
     &--login {
         font-family: $concert;
         color: $light-font-color;

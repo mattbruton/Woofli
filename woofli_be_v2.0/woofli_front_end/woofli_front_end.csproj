@@ -151,6 +151,7 @@
     <Content Include="content\styles\navigation.scss" />
     <Content Include="content\styles\normalize.scss" />
     <Content Include="content\styles\input.scss" />
+    <Content Include="content\styles\image.scss" />
     <None Include="scripts\jquery-3.0.0.intellisense.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />

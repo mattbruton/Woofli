@@ -52,6 +52,7 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'petS
         petsitterService.getPetsitters().then(function (results) {
             $scope.userPetsitters.length = 0;
             $scope.userPetsitters = angular.copy(results.data);
+            console.log(results.data);
         }, function (error) {
             console.log(error);
         });
@@ -61,6 +62,7 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'petS
         petService.getPets().then(function (results) {
             $scope.userPets.length = 0;
             $scope.userPets = angular.copy(results.data);
+            console.log(results.data);
         }, function (error) {
             console.log(error);
         });

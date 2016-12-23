@@ -29,6 +29,10 @@
     border-bottom: solid 2px #fff;
     display: inline;
     padding-bottom: 3px; }
+  .header--profile-card {
+    padding-top: 0.75vh;
+    color: #fff;
+    font-family: "Concert One"; }
   .header--login {
     font-family: "Concert One";
     color: #fff;
@@ -50,20 +54,34 @@
       margin-top: 15vh; } }
 
 .container--pet {
-  background-color: #fff;
+  background-color: cadetblue;
   color: #333333;
   box-shadow: 0 4px 2px -2px gray;
-  min-height: 300px;
+  min-height: 50px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  margin-bottom: 2vh; }
+
+.container--pet-add {
+  background-color: #FF8C00;
+  color: #333333;
+  box-shadow: 0 4px 2px -2px gray;
+  min-height: 50px;
+  border: 2px solid #fff;
   border-radius: 10px; }
 
 .container--pet-profiles {
   margin-top: 4vh;
-  background-color: cadetblue;
+  background-color: #BFD8D9;
   border: 3px solid #fff;
   border-radius: 10px;
   padding: 15px;
   height: auto;
   overflow: auto; }
+
+.container--icon {
+  padding-left: 2vw;
+  padding-top: 0.75vh; }
 
 .container--account-service {
   height: 300px;
@@ -85,6 +103,14 @@
   margin-top: 1rem;
   padding: 1.5rem .75rem;
   box-shadow: 0 4px 2px -2px gray; }
+
+.image {
+  max-width: 50%; }
+
+.icon--add {
+  font-size: 1.5rem;
+  padding-top: .75vh;
+  color: #fff; }
 
 .navigation {
   background-color: cadetblue; }
