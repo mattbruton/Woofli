@@ -13,9 +13,17 @@
   border-radius: 10px;
   margin-bottom: 2vh; }
 
+.container--pet-add {
+  background-color: #FF8C00;
+  color: #333333;
+  box-shadow: 0 4px 2px -2px gray;
+  min-height: 50px;
+  border: 2px solid #fff;
+  border-radius: 10px; }
+
 .container--pet-profiles {
   margin-top: 4vh;
-  background-color: cadetblue;
+  background-color: #BFD8D9;
   border: 3px solid #fff;
   border-radius: 10px;
   padding: 15px;
