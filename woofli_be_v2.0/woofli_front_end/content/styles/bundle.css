@@ -86,6 +86,9 @@
   padding: 1.5rem .75rem;
   box-shadow: 0 4px 2px -2px gray; }
 
+.image {
+  max-width: 50%; }
+
 .navigation {
   background-color: cadetblue; }
   .navigation__link {
