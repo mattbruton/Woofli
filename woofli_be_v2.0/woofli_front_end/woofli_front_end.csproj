@@ -75,6 +75,8 @@
     <Content Include="app\partials\add-petsitter.html" />
     <Content Include="app\partials\home.html" />
     <Content Include="app\partials\login.html" />
+    <Content Include="app\partials\pet.html" />
+    <Content Include="app\partials\petsitter.html" />
     <Content Include="app\services\petService.js" />
     <Content Include="app\services\petsitterService.js" />
     <Content Include="content\bootstrap-flex.css" />
