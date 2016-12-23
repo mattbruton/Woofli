@@ -29,6 +29,10 @@
     border-bottom: solid 2px #fff;
     display: inline;
     padding-bottom: 3px; }
+  .header--profile-card {
+    padding-top: 0.75vh;
+    color: #fff;
+    font-family: "Concert One"; }
   .header--login {
     font-family: "Concert One";
     color: #fff;
@@ -50,11 +54,13 @@
       margin-top: 15vh; } }
 
 .container--pet {
-  background-color: #fff;
+  background-color: cadetblue;
   color: #333333;
   box-shadow: 0 4px 2px -2px gray;
-  min-height: 300px;
-  border-radius: 10px; }
+  min-height: 50px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  margin-bottom: 2vh; }
 
 .container--pet-profiles {
   margin-top: 4vh;

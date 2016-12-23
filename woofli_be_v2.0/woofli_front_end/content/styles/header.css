@@ -8,6 +8,10 @@
     border-bottom: solid 2px #fff;
     display: inline;
     padding-bottom: 3px; }
+  .header--profile-card {
+    padding-top: 0.75vh;
+    color: #fff;
+    font-family: "Concert One"; }
   .header--login {
     font-family: "Concert One";
     color: #fff;

@@ -11,11 +11,13 @@
     }
 
     &--pet {
-        background-color: $light-font-color;
+        background-color: $background-color;
         color: $dark-font-color;
         box-shadow: 0 4px 2px -2px gray;
-        min-height: 300px;
+        min-height: 50px;
+        border: 2px solid $light-font-color;
         border-radius: 10px;
+        margin-bottom: 2vh;
     }
 
     &--pet-profiles {
