@@ -23,14 +23,16 @@
         
         <div class="col-xs-12 col-md-6">
             <h1 class="header--profile">Petsitters</h1>
-            <div class="container--pet-profiles">
-                <div data-ng-repeat="petsitter in userPetsitters" class="col-xs-10 push-xs-1 col-md-4 container--pet">
-                    <h2>{{petsitter.firstname}} {{petsitter.lastname}}</h2>
-                    <button class="btn btn-primary">click</button>
+            <div class="container--pet-profiles container-fluid">
+                <div data-ng-repeat="petsitter in userPetsitters" class="col-xs-10 push-xs-1 container--pet">
+                    <div>
+                        <h2 class="header--profile-card col-xs-8 text-xs-center">{{petsitter.firstName}} {{petsitter.lastName}}</h2>
+                        <button class="btn btn-primary">click</button>
+                    </div>
                 </div>
-                <div class="col-xs-10 push-xs-1 col-md-4">
-                    <p>Add a pet</p>
-                    <button data-ng-click="goToNewPetsitterView()">Add a sitter.</button>
+                <div class="col-xs-10 container--pet-add push-xs-1 text-xs-center" data-ng-click="goToNewPetsitterView()">
+                    <h2 class="header--profile-card col-xs-8">Add a petsitter</h2>
+                    <span class="col-xs-4 container--icon"><i class="fa fa-plus icon--add" aria-hidden="true"></i></span>
                 </div>
             </div>
         </div>
