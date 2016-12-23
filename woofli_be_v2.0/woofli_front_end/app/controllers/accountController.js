@@ -7,12 +7,10 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'petS
     $scope.newPetsitter = {};
 
     $scope.goToNewPetsitterView = function () {
-
         $location.path("/add-petsitter");
     };
 
-    $scope.addNewPet = function () {
-
+    $scope.goToNewPetView = function () {
         $location.path("/add-pet");
     };
 
@@ -21,9 +19,19 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'petS
         $location.path('/account');
     };
 
+    $scope.addNewPet = function (newPet) {
+        petService.addNewPet($scope.newPet);
+        $location.path('/account');
+    };
+
+    petsitterService.getPetsitters().then(function (results) {
+        $scope.userPetsitters = angular.copy(results.data);
+    }, function (error) {
+        console.log(error);
+    });
+
     petService.getPets().then(function (results) {
         $scope.userPets = angular.copy(results.data);
-
     }, function (error) {
         console.log(error);
     });
