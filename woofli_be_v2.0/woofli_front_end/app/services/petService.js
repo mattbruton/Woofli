@@ -11,6 +11,12 @@ app.factory('petService', ['$http', function ($http) {
         });
     };
 
+    var _getSinglePet = function (id) {
+        return $http.get(serviceBase + 'api/pet/' + id).then(function (results) {
+            return results;
+        });
+    };
+
     var _addNewPet = function (pet) {
         var data = pet;
         $http.post(serviceBase + 'api/pet', data).then(function (results) {
@@ -19,8 +25,8 @@ app.factory('petService', ['$http', function ($http) {
     };
 
     petServiceFactory.getPets = _getPets;
+    petServiceFactory.getSinglePet = _getSinglePet;
     petServiceFactory.addNewPet = _addNewPet;
 
     return petServiceFactory;
-
 }]);

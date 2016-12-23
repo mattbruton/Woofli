@@ -3,6 +3,10 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'petS
 
     $scope.userPets = [];
     $scope.userPetsitters = [];
+
+    $scope.targetPet = {};
+    $scope.targetPetsitter = {};
+
     $scope.newPet = {};
     $scope.newPetsitter = {};
 
@@ -29,7 +33,7 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'petS
     $scope.updatePetsitterList = function () {
         petsitterService.getPetsitters().then(function (results) {
             $scope.userPetsitters.length = 0;
-            $scope.userPetsitters = angular.copy(results.data);
+            $scope.userPetsitters = results.data;
         }, function (error) {
             console.log(error);
         });
