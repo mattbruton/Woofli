@@ -33,6 +33,10 @@
 .container--icon-div {
   padding-top: .65vh; }
 
+.container--icon-data {
+  color: #fff;
+  font-size: 1.1rem; }
+
 .container--icon {
   padding-left: 2vw;
   padding-top: 0.75vh; }

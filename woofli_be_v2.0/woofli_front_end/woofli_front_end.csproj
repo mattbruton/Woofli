@@ -153,6 +153,7 @@
     <Content Include="content\styles\input.scss" />
     <Content Include="content\styles\image.scss" />
     <Content Include="content\styles\icon.scss" />
+    <Content Include="content\styles\pet.scss" />
     <None Include="scripts\jquery-3.0.0.intellisense.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />

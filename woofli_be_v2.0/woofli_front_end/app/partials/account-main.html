@@ -5,8 +5,8 @@
             <div class="container--pet-profiles container-fluid">
                 <div data-ng-repeat="pet in userPets" class="col-xs-10 push-xs-1 container--pet">
                     <div class="container-fluid">
-                        <h2 class="header--profile-card col-xs-8 text-xs-center">{{pet.name}}</h2>
-                        <div class="col-xs-4 text-xs-center container--icon-div">
+                        <h2 class="header--profile-card col-xs-10 text-xs-center">{{pet.name}}</h2>
+                        <div class="col-xs-2 text-xs-center container--icon-div">
                             <span class="container--icon" data-ng-click="goToTargetPetView(pet.petId)"><i class="fa fa-list icon--detail" aria-hidden="true"></i></span>
                         </div>
                     </div>
@@ -23,8 +23,8 @@
             <div class="container--pet-profiles container-fluid">
                 <div data-ng-repeat="petsitter in userPetsitters" class="col-xs-10 push-xs-1 container--pet">
                     <div>
-                        <h2 class="header--profile-card col-xs-8 text-xs-center">{{petsitter.firstName}} {{petsitter.lastName}}</h2>
-                        <div class="col-xs-4 text-xs-center container--icon-div">
+                        <h2 class="header--profile-card col-xs-10 text-xs-center">{{petsitter.firstName}} {{petsitter.lastName}}</h2>
+                        <div class="col-xs-2 text-xs-center container--icon-div">
                             <span class="container--icon" data-ng-click="goToTargetPetsitterView(petsitter.petsitterId)"><i class="fa fa-list icon--detail" aria-hidden="true"></i></span>
                         </div>
                     </div>
