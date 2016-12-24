@@ -1,5 +1,9 @@
 ﻿@import "variables.scss";
 
+.section__account {
+    padding-top: 1.5vh;
+}
+
 .container {
 
     &__form {
@@ -43,6 +47,7 @@
     }
 
     &--icon-data {
+        padding-top: 1.5vh;
         color: $light-font-color;
         font-size: 1.1rem;
     }

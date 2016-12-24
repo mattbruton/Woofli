@@ -50,6 +50,9 @@
     font-family: "Concert One";
     font-size: 8rem; }
 
+.section__account {
+  padding-top: 1.5vh; }
+
 .container__form {
   margin-top: 20vh; }
   @media only screen and (max-width: 767px) {
@@ -86,6 +89,7 @@
   padding-top: .65vh; }
 
 .container--icon-data {
+  padding-top: 1.5vh;
   color: #fff;
   font-size: 1.1rem; }
 
