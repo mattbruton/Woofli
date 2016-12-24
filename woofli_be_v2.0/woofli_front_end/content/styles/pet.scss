@@ -1,0 +1,26 @@
+﻿@import "variables.scss";
+
+.pet {
+
+    &__header {
+        color: $light-font-color;
+        font-family: $concert;
+        padding-top: 1.5vh;
+    }
+
+    &__image-container {
+        padding-top: 25px;
+    }
+
+    &__image {
+        color: $light-font-color;
+        border: 3px solid $light-font-color;
+        border-radius: 50%;
+        height: 300px;
+        width: 300px;
+
+        @media #{$mobile-only} {
+
+        }
+    }
+}
