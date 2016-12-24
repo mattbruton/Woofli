@@ -30,6 +30,9 @@
   height: auto;
   overflow: auto; }
 
+.container--icon-div {
+  padding-top: .65vh; }
+
 .container--icon {
   padding-left: 2vw;
   padding-top: 0.75vh; }
