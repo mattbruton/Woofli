@@ -1,4 +1,5 @@
 ﻿<div data-ng-init="viewTargetPet(id)" class="container">
+    <button data-ng-click="backToAccount()">go back</button>
     <h1 data-ng-bind="targetPet.name"></h1>
     <img data-ng-src="{{targetPet.imageUrl}}"/>
     <button data-ng-click="backToAccount()"></button>

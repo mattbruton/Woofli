@@ -29,6 +29,11 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'petS
         $location.path(`/pet/${id}`);
     }
 
+    $scope.goToTargetPetsitterView = function (id) {
+        $rootScope.id = id;
+        $location.path(`/petsitter/${id}`);
+    }
+
     $scope.viewTargetPet = function (id) {
         petService.getSinglePet(id).then(function (results) {
             $scope.targetPet = results.data;
