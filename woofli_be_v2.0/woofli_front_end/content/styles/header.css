@@ -12,6 +12,10 @@
     padding-top: 0.75vh;
     color: #fff;
     font-family: "Concert One"; }
+  .header--profile-title {
+    padding-top: 0.75vh;
+    color: dimgrey;
+    font-family: "Concert One"; }
   .header--login {
     font-family: "Concert One";
     color: #fff;
