@@ -19,6 +19,12 @@
         font-family: $concert;
     }
 
+    &--profile-title {
+        padding-top: 0.75vh;
+        color: dimgrey;
+        font-family: $concert;
+    }
+
     &--login {
         font-family: $concert;
         color: $light-font-color;

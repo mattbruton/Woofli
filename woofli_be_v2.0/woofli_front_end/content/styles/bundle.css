@@ -36,6 +36,10 @@
     padding-top: 0.75vh;
     color: #fff;
     font-family: "Concert One"; }
+  .header--profile-title {
+    padding-top: 0.75vh;
+    color: dimgrey;
+    font-family: "Concert One"; }
   .header--login {
     font-family: "Concert One";
     color: #fff;
@@ -75,6 +79,15 @@
   min-height: 50px;
   border: 2px solid #fff;
   border-radius: 10px; }
+
+.container--med-add {
+  background-color: #FF8C00;
+  color: #333333;
+  box-shadow: 0 4px 2px -2px gray;
+  min-height: 50px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  margin-bottom: 1.25vh; }
 
 .container--pet-profiles {
   margin-top: 4vh;
@@ -117,6 +130,7 @@
   margin-top: 1.5vh;
   border: 3px solid #fff;
   border-radius: 10px;
+  background-color: #BFD8D9;
   height: auto;
   overflow: auto; }
 

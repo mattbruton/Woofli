@@ -33,6 +33,16 @@
         border-radius: 10px;
     }
 
+    &--med-add {
+        background-color: $contrast-color;
+        color: $dark-font-color;
+        box-shadow: 0 4px 2px -2px gray;
+        min-height: 50px;
+        border: 2px solid $light-font-color;
+        border-radius: 10px;
+        margin-bottom: 1.25vh;
+    }
+
     &--pet-profiles {
         margin-top: 4vh;
         background-color: #BFD8D9;
@@ -79,6 +89,7 @@
         margin-top: 1.5vh;
         border: 3px solid $light-font-color;
         border-radius: 10px;
+        background-color: #BFD8D9;
         height:auto; overflow:auto;
     }
 }
