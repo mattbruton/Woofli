@@ -18,9 +18,9 @@
         <div class="col-xs-12 col-md-6 section__account">
             <h1 class="header--profile">Petsitters</h1>
             <div class="container--pet-profiles container-fluid">
-                <div data-ng-repeat="petsitter in userPetsitters" class="col-xs-10 push-xs-1 container--pet">
+                <div data-ng-repeat="petsitter in userPetsitters" data-ng-click="goToTargetPetsitterView(petsitter.petsitterId)" class="col-xs-10 push-xs-1 container--pet text-xs-center">
                     <div>
-                        <h2 class="header--profile-card col-xs-10 text-xs-center" data-ng-click="goToTargetPetsitterView(petsitter.petsitterId)">{{petsitter.firstName}} {{petsitter.lastName}}</h2>
+                        <h2 class="header--profile-card col-xs-12">{{petsitter.firstName}} {{petsitter.lastName}}</h2>
                     </div>
                 </div>
                 <div class="col-xs-10 container--pet-add push-xs-1 text-xs-center" data-ng-click="goToNewPetsitterView()">
