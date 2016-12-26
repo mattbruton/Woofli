@@ -6,7 +6,10 @@
     <div class="container-fluid">
         <div class="container--vet-info col-xs-12">
             <h4 class="header--profile-title col-xs-12 text-xs-center">Primary Vet</h4>
-            <p data-ng-hide="targetPet.primaryVet">has no vet</p>
+            <div class="col-xs-12 container--med-add text-xs-center" data-ng-hide="targetPet.primaryVet" data-ng-click="console.log('hi');">
+                <h2 class="header--profile-card col-xs-10">Add veterinarian</h2>
+                <span class="col-xs-2 container--icon"><i class="fa fa-plus icon--add" aria-hidden="true"></i></span>
+            </div>
             <div data-ng-hide="!targetPet.primaryVet">
                 <h1 class="header">Primary Vet</h1>
                 <p></p>

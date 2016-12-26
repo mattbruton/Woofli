@@ -85,6 +85,14 @@
         }
     }
 
+    &--select-pet-type {
+        margin-top: 2.5vh;
+        border: 3px solid $light-font-color;
+        border-radius: 10px;
+        color: $light-font-color;
+        box-shadow: 0 4px 2px -2px gray;
+    }
+
     &--vet-info {
         margin-top: 1.5vh;
         border: 3px solid $light-font-color;
