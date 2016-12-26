@@ -41,6 +41,13 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'petS
         });
     };
 
+    $scope.viewTargetPetsitter = function (id) {
+        petsitterService.getSinglePetsitter(id).then(function (results) {
+            $scope.targetPetsitter = results.data;
+            console.log($scope.targetPetsitter);
+        });
+    };
+
     $scope.addNewPetsitter = function (newPetsitter) {
         petsitterService.addNewPetsitter($scope.newPetsitter);
         $scope.updatePetsitterList();

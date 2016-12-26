@@ -73,6 +73,11 @@ namespace woofli_be_v2._0.DAL
             return _context.Pets.SingleOrDefault(p => p.PetId == _id);
         }
 
+        public Petsitter GetPetsitterById(int _id)
+        {
+            return _context.Petsitters.SingleOrDefault(p => p.PetsitterId == _id);
+        }
+
         public void AddPetToUser(string username, Pet pet)
         {
             _context.Users.SingleOrDefault(u => u.UserName == username).Pets.Add(pet);

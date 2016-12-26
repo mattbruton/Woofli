@@ -177,6 +177,17 @@ namespace woofli_be_v2._0.Tests.DAL
 
             Assert.AreEqual(expected_pet_name, actual_pet_name);
         }
+
+        [TestMethod]
+        public void RepoEnsureCanReturnCorrectSinglePetsitter()
+        {
+            IncludeMockData();
+            string expected_petsitter_firstname = "Harry";
+            string actual_petsitter_firstname = repo.GetPetsitterById(3).FirstName;
+
+            Assert.AreEqual(expected_petsitter_firstname, actual_petsitter_firstname);
+        }
+
         [TestMethod]
         public void RepoEnsureReturnNullWhenGettingPetWithInvalidId()
         {

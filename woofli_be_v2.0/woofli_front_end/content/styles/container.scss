@@ -99,5 +99,16 @@
         border-radius: 10px;
         background-color: #BFD8D9;
         height:auto; overflow:auto;
+        box-shadow: 0 4px 2px -2px gray;
+    }
+
+    &--petsitter-info {
+        margin-top: 1.5vh;
+        margin-bottom: 1.5vh;
+        border: 3px solid $light-font-color;
+        border-radius: 10px;
+        background-color: $background-color;
+        height:auto; overflow:auto;
+        box-shadow: 0 4px 2px -2px gray;
     }
 }
