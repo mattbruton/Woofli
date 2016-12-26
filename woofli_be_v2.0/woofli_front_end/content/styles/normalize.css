@@ -3,6 +3,9 @@
 
 .text {
   color: cadetblue; }
+  .text--select {
+    font-size: 18px;
+    font-weight: 600; }
 
 .btn-primary {
   background-color: #FF8C00;

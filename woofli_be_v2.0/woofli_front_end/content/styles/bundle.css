@@ -3,6 +3,9 @@
 
 .text {
   color: cadetblue; }
+  .text--select {
+    font-size: 18px;
+    font-weight: 600; }
 
 .btn-primary {
   background-color: #FF8C00;
@@ -125,6 +128,13 @@
       border: none;
       max-width: 100vw;
       max-height: 20vh; } }
+
+.container--select-pet-type {
+  margin-top: 2.5vh;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 4px 2px -2px gray; }
 
 .container--vet-info {
   margin-top: 1.5vh;

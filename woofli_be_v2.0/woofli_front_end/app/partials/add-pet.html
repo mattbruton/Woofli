@@ -5,21 +5,21 @@
 
         <form class="form-login" role="form">
             <input type="text" class="form-control input" placeholder="Pet's Name" data-ng-model="newPet.Name" required autofocus>
-
-            <fieldset class="form-group">
-                <legend>Select a pet type:</legend>
-                <div class="form-check">
-                    <label class="form-check-label">
-                        <input type="radio" class="form-check-input" data-ng-model="newPet.IsCanine" value="true" id="dogRadio">
-                        Dog
-                    </label>
-                    <label class="form-check-label">
-                        <input type="radio" class="form-check-input" data-ng-model="newPet.IsCanine" value="false" id="catRadio">
-                        Cat
-                    </label>
-                </div>
-            </fieldset>
-
+            <div class="container container--select-pet-type text-xs-center">
+                <fieldset class="form-group">
+                    <legend><h4 class="header--profile-card">Select a pet type:</h4></legend>
+                    <div class="form-check">
+                        <label class="form-check-label col-xs-6">
+                            <input type="radio" class="form-check-input" data-ng-model="newPet.IsCanine" value="true" id="dogRadio">
+                            <span class="text--select">Dog</span>
+                        </label>
+                        <label class="form-check-label col-xs-6">
+                            <input type="radio" class="form-check-input" data-ng-model="newPet.IsCanine" value="false" id="catRadio">
+                            <span class="text--select">Cat</span>
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
             <div class="text-xs-center btn--form-spacing">
                 <button class="btn btn-lg btn-primary" type="submit" data-ng-click="addNewPet(newPet)">Add Pet</button>
             </div>

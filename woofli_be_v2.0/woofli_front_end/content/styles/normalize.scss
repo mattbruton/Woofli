@@ -6,6 +6,11 @@
 
 .text {
     color: $background-color;
+
+    &--select {
+        font-size: 18px;
+        font-weight: 600;
+    }
 }
 
 .btn-primary {
