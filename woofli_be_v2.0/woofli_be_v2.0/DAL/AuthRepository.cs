@@ -78,6 +78,19 @@ namespace woofli_be_v2._0.DAL
             return _context.Petsitters.SingleOrDefault(p => p.PetsitterId == _id);
         }
 
+        public void RemovePetsitterById(string username, int _id)
+        {
+            CustomUser user = _context.Users.FirstOrDefault(u => u.UserName == username);
+            Petsitter sitter_to_remove = _context.Petsitters.FirstOrDefault(p => p.PetsitterId == _id);
+            
+            if (sitter_to_remove != null)
+            {
+                user.Petsitters.Remove(sitter_to_remove);
+                _context.Petsitters.Remove(sitter_to_remove);
+                _context.SaveChanges();
+            }
+        }
+
         public void AddPetToUser(string username, Pet pet)
         {
             _context.Users.SingleOrDefault(u => u.UserName == username).Pets.Add(pet);
