@@ -211,6 +211,17 @@ namespace woofli_be_v2._0.Tests.DAL
 
             Assert.IsTrue(repo.GetAllPetsittersForUser("test123").Count == 2);
         }
+
+        [TestMethod]
+        public void RepoRemovePetsitterRemovesFromDb()
+        {
+            IncludeMockData();
+            repo.RemovePetsitterById("test123", 3);
+            int expected_sitter_count = 0;
+            int actual_sitter_count = repo.GetAllPetsittersForUser("test123").Count;
+            
+            Assert.AreEqual(expected_sitter_count, actual_sitter_count);
+        }
     }
 }
 

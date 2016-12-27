@@ -24,8 +24,15 @@ app.factory('petsitterService', ['$http', function ($http) {
         });
     };
 
+    var _removeSinglePetsitter = function (id) {
+        return $http.delete(serviceBase + 'api/petsitter/' + id).then(function (results) {
+            return results;
+        });
+    };
+
     petsitterServiceFactory.getPetsitters = _getPetsitters;
     petsitterServiceFactory.getSinglePetsitter = _getSinglePetsitter;
+    petsitterServiceFactory.removeSinglePetsitter = _removeSinglePetsitter;
     petsitterServiceFactory.addNewPetsitter = _addNewPetsitter;
 
     return petsitterServiceFactory;
