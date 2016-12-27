@@ -71,7 +71,7 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'petS
     $scope.updatePetsitterList = function () {
         petsitterService.getPetsitters().then(function (results) {
             $scope.userPetsitters.length = 0;
-            $scope.userPetsitters = angular.copy(results.data);
+            $scope.userPetsitters = results.data;
             console.log(results.data);
         }, function (error) {
             console.log(error);
@@ -81,7 +81,7 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'petS
     $scope.updatePetList = function () {
         petService.getPets().then(function (results) {
             $scope.userPets.length = 0;
-            $scope.userPets = angular.copy(results.data);
+            $scope.userPets = results.data;
             console.log(results.data);
         }, function (error) {
             console.log(error);
