@@ -37,20 +37,17 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'petS
     $scope.viewTargetPet = function (id) {
         petService.getSinglePet(id).then(function (results) {
             $scope.targetPet = results.data;
-            console.log($scope.targetPet);
         });
     };
 
     $scope.viewTargetPetsitter = function (id) {
         petsitterService.getSinglePetsitter(id).then(function (results) {
             $scope.targetPetsitter = results.data;
-            console.log($scope.targetPetsitter);
         });
     };
 
     $scope.removePetsitter = function (id) {
         petsitterService.removeSinglePetsitter(id).then(function (results) {
-            console.log(results);
             $scope.updatePetsitterList();
             $location.path('/account');
         });
@@ -72,7 +69,6 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'petS
         petsitterService.getPetsitters().then(function (results) {
             $scope.userPetsitters.length = 0;
             $scope.userPetsitters = results.data;
-            console.log(results.data);
         }, function (error) {
             console.log(error);
         });
@@ -82,7 +78,6 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'petS
         petService.getPets().then(function (results) {
             $scope.userPets.length = 0;
             $scope.userPets = results.data;
-            console.log(results.data);
         }, function (error) {
             console.log(error);
         });
