@@ -31,8 +31,15 @@ app.factory('petService', ['$http', function ($http) {
         });
     };
 
+    var _removeSinglePet = function (id) {
+        return $http.delete(serviceBase + 'api/pet/' + id).then(function (results) {
+            return results;
+        });
+    };
+
     petServiceFactory.getPets = _getPets;
     petServiceFactory.getSinglePet = _getSinglePet;
+    petServiceFactory.removeSinglePet = _removeSinglePet;
     petServiceFactory.addNewPet = _addNewPet;
 
     return petServiceFactory;

@@ -53,6 +53,13 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'petS
         });
     };
 
+    $scope.removePet = function (id) {
+        petService.removeSinglePet(id).then(function (results) {
+            $scope.updatePetList();
+            $location.path('/account');
+        });
+    };
+
     $scope.addNewPetsitter = function (newPetsitter) {
         petsitterService.addNewPetsitter($scope.newPetsitter);
         $scope.updatePetsitterList();

@@ -85,9 +85,20 @@ namespace woofli_be_v2._0.Controllers
         }
 
         // DELETE api/<controller>/5
-        public void Delete(int id)
+        [Authorize]
+        public Dictionary<string, bool> Delete(int id)
         {
-            //NYI
+            Dictionary<string, bool> answer = new Dictionary<string, bool>();
+            if (FindActiveUserName() != null)
+            {
+                _repo.RemovePetById(FindActiveUserName(), id);
+                answer.Add("Removed Pet", true);
+            }
+            else
+            {
+                answer.Add("Removed Pet", false);
+            }
+            return answer;
         }
     }
 }
