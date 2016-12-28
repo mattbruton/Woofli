@@ -222,6 +222,17 @@ namespace woofli_be_v2._0.Tests.DAL
             
             Assert.AreEqual(expected_sitter_count, actual_sitter_count);
         }
+
+        [TestMethod]
+        public void RepoRemovePetsRemovesFromDb()
+        {
+            IncludeMockData();
+            repo.RemovePetById("test123", 1);
+            int expected_pet_count = 1;
+            int actual_pet_count = repo.GetAllPetsittersForUser("test123").Count;
+
+            Assert.AreEqual(expected_pet_count, actual_pet_count);
+        }
     }
 }
 

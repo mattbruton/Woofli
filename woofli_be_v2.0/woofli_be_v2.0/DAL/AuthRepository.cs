@@ -91,6 +91,19 @@ namespace woofli_be_v2._0.DAL
             }
         }
 
+        public void RemovePetById(string username, int _id)
+        {
+            CustomUser user = _context.Users.FirstOrDefault(u => u.UserName == username);
+            Pet pet_to_remove = _context.Pets.FirstOrDefault(p => p.PetId == _id);
+
+            if (pet_to_remove != null)
+            {
+                user.Pets.Remove(pet_to_remove);
+                _context.Pets.Remove(pet_to_remove);
+                _context.SaveChanges();
+            }
+        }
+
         public void AddPetToUser(string username, Pet pet)
         {
             _context.Users.SingleOrDefault(u => u.UserName == username).Pets.Add(pet);

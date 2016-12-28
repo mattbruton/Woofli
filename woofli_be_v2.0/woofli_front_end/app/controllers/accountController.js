@@ -27,12 +27,12 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'petS
     $scope.goToTargetPetView = function (id) {
         $rootScope.id = id;
         $location.path(`/pet/${id}`);
-    }
+    };
 
     $scope.goToTargetPetsitterView = function (id) {
         $rootScope.id = id;
         $location.path(`/petsitter/${id}`);
-    }
+    };
 
     $scope.viewTargetPet = function (id) {
         petService.getSinglePet(id).then(function (results) {
@@ -49,6 +49,13 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'petS
     $scope.removePetsitter = function (id) {
         petsitterService.removeSinglePetsitter(id).then(function (results) {
             $scope.updatePetsitterList();
+            $location.path('/account');
+        });
+    };
+
+    $scope.removePet = function (id) {
+        petService.removeSinglePet(id).then(function (results) {
+            $scope.updatePetList();
             $location.path('/account');
         });
     };
