@@ -123,7 +123,9 @@ namespace woofli_be_v2._0.DAL
         public void AddVeterinarianToPetByPetId(int pet_id, Veterinarian vet)
         {
             Pet pet = _context.Pets.SingleOrDefault(p => p.PetId == pet_id);
+            _context.Veterinarians.Add(vet);
             pet.PrimaryVet = vet;
+            _context.SaveChanges();
         }
     }
 }
