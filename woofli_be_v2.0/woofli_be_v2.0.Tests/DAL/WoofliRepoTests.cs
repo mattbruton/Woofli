@@ -233,6 +233,31 @@ namespace woofli_be_v2._0.Tests.DAL
 
             Assert.AreEqual(expected_pet_count, actual_pet_count);
         }
+
+        [TestMethod]
+        public void RepoReturnsPrimaryVetForPet()
+        {
+            IncludeMockData();
+            
+            string expected_vet_clinic_name = "TestHospital";
+            string actual_vet_clinic_name = repo.GetVeterinarianByPetId(1).ClinicName;
+
+            Assert.AreEqual(expected_vet_clinic_name, actual_vet_clinic_name);
+        }
+
+        [TestMethod]
+        public void RepoAddsPrimaryVetToPetById()
+        {
+            IncludeMockData();
+            Veterinarian test_vet = new Veterinarian { ClinicName = "New Clinic" };
+
+            repo.AddVeterinarianToPetByPetId(1, test_vet);
+
+            string expected_vet_clinic_name = "New Clinic";
+            string actual_vet_clinic_name = repo.GetVeterinarianByPetId(1).ClinicName;
+
+            Assert.AreEqual(expected_vet_clinic_name, actual_vet_clinic_name);
+        }
     }
 }
 

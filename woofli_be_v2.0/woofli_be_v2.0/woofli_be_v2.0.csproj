@@ -145,6 +145,7 @@
     <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\PetController.cs" />
     <Compile Include="Controllers\PetsitterController.cs" />
+    <Compile Include="Controllers\VeterinarianController.cs" />
     <Compile Include="DAL\AuthContext.cs" />
     <Compile Include="DAL\AuthRepository.cs" />
     <Compile Include="Migrations\201612192209596_InitialCreate.cs" />
