@@ -258,6 +258,16 @@ namespace woofli_be_v2._0.Tests.DAL
 
             Assert.AreEqual(expected_vet_clinic_name, actual_vet_clinic_name);
         }
+
+        [TestMethod]
+        public void RepoCanRemoveVeterinarians()
+        {
+            IncludeMockData();
+            repo.RemoveVeterinarianFromPet(1);
+
+            Assert.IsNull(repo.GetVeterinarianByPetId(1));
+            Assert.IsTrue(vets.Count == 1);
+        }
     }
 }
 

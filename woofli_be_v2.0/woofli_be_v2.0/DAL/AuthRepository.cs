@@ -127,5 +127,13 @@ namespace woofli_be_v2._0.DAL
             pet.PrimaryVet = vet;
             _context.SaveChanges();
         }
+
+        public void RemoveVeterinarianFromPet(int pet_id)
+        {
+            Pet pet = _context.Pets.SingleOrDefault(p => p.PetId == pet_id);
+            _context.Veterinarians.Remove(pet.PrimaryVet);
+            pet.PrimaryVet = null;
+            _context.SaveChanges();
+        }
     }
 }
