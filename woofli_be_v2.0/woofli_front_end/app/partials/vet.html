@@ -1,0 +1,20 @@
+﻿<div data-ng-init="viewTargetVet()" class="container">
+    <h1 class="col-xs-12 pet__header text-xs-center" data-ng-bind="targetVet.clinicName"></h1>
+    <div class="container-fluid">
+        <div class="container--vet-info col-xs-12 col-md-8 push-md-2">
+            <h4 class="header--profile-title col-xs-12 text-xs-center">Phone</h4>
+            <div class="container--petsitter-info text-xs-center">
+                <h4 class="header--profile-card" data-ng-bind="targetVet.phone"></h4>
+            </div>
+        </div>
+        <!--<div class="container--vet-info col-xs-12 col-md-8 push-md-2">
+            <div class="container--petsitter-info-edit col-xs-4 push-xs-1">
+                <h4 class="header--profile-card text-xs-center">Edit</h4>
+            </div>
+            <div class="container--petsitter-info-delete col-xs-4 push-xs-3" data-ng-click="removePetsitter(targetPetsitter.petsitterId)">
+                <h4 class="header--profile-card text-xs-center">Remove</h4>
+            </div>
+        </div>-->
+    </div>
+    <span class="text-xs-center col-xs-8 push-xs-2 container--icon-data" data-ng-click="backToAccount()"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i><span class="spacing--back">Back to Account</span></span>
+</div>

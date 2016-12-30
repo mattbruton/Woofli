@@ -35,6 +35,6 @@ Z:\mattbruton On My Mac\workspace\C-Sharp\WoofliCapstone\woofli_be_v2.0\woofli_f
 Z:\mattbruton On My Mac\workspace\C-Sharp\WoofliCapstone\woofli_be_v2.0\woofli_front_end\bin\woofli_front_end.pdb
 Z:\mattbruton On My Mac\workspace\C-Sharp\WoofliCapstone\woofli_be_v2.0\woofli_front_end\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 Z:\mattbruton On My Mac\workspace\C-Sharp\WoofliCapstone\woofli_be_v2.0\woofli_front_end\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-Z:\mattbruton On My Mac\workspace\C-Sharp\WoofliCapstone\woofli_be_v2.0\woofli_front_end\obj\Debug\woofli_front_end.csprojResolveAssemblyReference.cache
 Z:\mattbruton On My Mac\workspace\C-Sharp\WoofliCapstone\woofli_be_v2.0\woofli_front_end\obj\Debug\woofli_front_end.dll
 Z:\mattbruton On My Mac\workspace\C-Sharp\WoofliCapstone\woofli_be_v2.0\woofli_front_end\obj\Debug\woofli_front_end.pdb
+Z:\mattbruton On My Mac\workspace\C-Sharp\WoofliCapstone\woofli_be_v2.0\woofli_front_end\obj\Debug\woofli_front_end.csprojResolveAssemblyReference.cache

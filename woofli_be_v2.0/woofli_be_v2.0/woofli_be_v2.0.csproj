@@ -152,6 +152,14 @@
     <Compile Include="Migrations\201612192209596_InitialCreate.Designer.cs">
       <DependentUpon>201612192209596_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612292336005_PetWithVetMigration.cs" />
+    <Compile Include="Migrations\201612292336005_PetWithVetMigration.Designer.cs">
+      <DependentUpon>201612292336005_PetWithVetMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612292343254_PetWithVetMigration2.cs" />
+    <Compile Include="Migrations\201612292343254_PetWithVetMigration2.Designer.cs">
+      <DependentUpon>201612292343254_PetWithVetMigration2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CustomUser.cs" />
     <Compile Include="Models\Medicine.cs" />
@@ -181,6 +189,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201612192209596_InitialCreate.resx">
       <DependentUpon>201612192209596_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612292336005_PetWithVetMigration.resx">
+      <DependentUpon>201612292336005_PetWithVetMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612292343254_PetWithVetMigration2.resx">
+      <DependentUpon>201612292343254_PetWithVetMigration2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

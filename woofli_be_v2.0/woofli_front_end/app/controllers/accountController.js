@@ -1,13 +1,15 @@
 ﻿'use strict';
-app.controller('accountController', ['$scope', '$location', 'authService', 'petService', 'petsitterService', '$rootScope', function ($scope, $location, authService, petService, petsitterService, $rootScope) {
+app.controller('accountController', ['$scope', '$location', 'authService', 'vetService', 'petService', 'petsitterService', '$rootScope', function ($scope, $location, authService, vetService, petService, petsitterService, $rootScope) {
 
     $scope.userPets = [];
     $scope.userPetsitters = [];
 
     $scope.targetPet = {};
     $scope.targetPetsitter = {};
+    $scope.targetVet = {};
 
     $scope.newPet = {};
+    $scope.newVet = {};
     $scope.newPetsitter = {};
 
     $scope.id = $rootScope.id;
@@ -20,6 +22,10 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'petS
         $location.path("/add-petsitter");
     };
 
+    $scope.goToNewVetView = function () {
+        $location.path("/add-vet");
+    };
+
     $scope.goToNewPetView = function () {
         $location.path("/add-pet");
     };
@@ -27,6 +33,11 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'petS
     $scope.goToTargetPetView = function (id) {
         $rootScope.id = id;
         $location.path(`/pet/${id}`);
+    };
+
+    $scope.goToTargetVetView = function (id) {
+        $rootScope.id = id;
+        $location.path(`/vet/${id}`);
     };
 
     $scope.goToTargetPetsitterView = function (id) {
@@ -37,6 +48,14 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'petS
     $scope.viewTargetPet = function (id) {
         petService.getSinglePet(id).then(function (results) {
             $scope.targetPet = results.data;
+            $scope.viewTargetVet($scope.id);
+        });
+    };
+
+    $scope.viewTargetVet = function (id) {
+        vetService.getPrimaryVet(id).then(function (results) {
+            $scope.targetVet = results.data;
+            console.log($scope.targetVet);
         });
     };
 
@@ -58,6 +77,13 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'petS
             $scope.updatePetList();
             $location.path('/account');
         });
+    };
+
+    $scope.addNewVet = function (newVet) {
+        $scope.newVet.PetId = $rootScope.id;
+        vetService.addPrimaryVet($scope.newVet, $rootScope.id);
+        $scope.updatePetList();
+        $location.path(`/pet/{{$rootScope.id}}`);
     };
 
     $scope.addNewPetsitter = function (newPetsitter) {
