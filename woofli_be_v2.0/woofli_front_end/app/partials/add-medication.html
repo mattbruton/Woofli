@@ -5,7 +5,20 @@
 
         <form class="form-login" role="form">
             <input type="text" class="form-control input" placeholder="Medication Name" data-ng-model="newMed.Name" required autofocus>
-            <input type="text" class="form-control input" placeholder="Quantity" data-ng-model="newMed.PrescriptionQuantity" required>
+            <input type="text" class="form-control input" placeholder="Prescription Quantity" data-ng-model="newMed.PrescriptionQuantity" required>
+
+            <div class="container container--select-pet-type text-xs-center">
+                <fieldset class="form-group">
+                    <legend><h4 class="header--profile-card">Dosage Information</h4></legend>
+                    <div class="col-xs-6">
+                        <input type="text" class="form-control input" placeholder="Dosage Quantity" data-ng-model="newMed.Dosage" required>
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="text" class="form-control input" placeholder="Dosage Unit (mL, capsule)" data-ng-model="newMed.DosageUnit" required>
+                    </div>
+                </fieldset>
+            </div>
+
             <div class="container container--select-pet-type text-xs-center">
                 <fieldset class="form-group">
                     <legend><h4 class="header--profile-card">Does the medication get refilled?</h4></legend>

@@ -18,11 +18,11 @@
     <div class="container-fluid">
         <div class="container--vet-info col-xs-12 col-md-8 push-md-2">
             <h4 class="header--profile-title col-xs-12 text-xs-center">Medications</h4>
-            <div class="col-xs-12 container--med-add text-xs-center" data-ng-hide="targetPet.medications.length > 0" data-ng-click="console.log('hi');">
+            <div class="col-xs-12 container--med-add text-xs-center" data-ng-hide="targetPet.medications.length > 0" data-ng-click="goToNewMedView()">
                 <h2 class="header--profile-card col-xs-10">New medication</h2>
                 <span class="col-xs-2 container--icon"><i class="fa fa-plus icon--add" aria-hidden="true"></i></span>
             </div>
-            <div data-ng-hide="!targetPet.medications">
+            <div data-ng-hide="targetPet.medications.length > 0">
                 <div data-ng-repeat="medication in targetPet.medications">
                     <h1 class="header">{{medication.name}}</h1>
                     <p></p>
