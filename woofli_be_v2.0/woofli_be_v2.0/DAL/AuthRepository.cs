@@ -131,5 +131,35 @@ namespace woofli_be_v2._0.DAL
             pet.PrimaryVet = null;
             _context.SaveChanges();
         }
+
+        public List<Medicine> GetMedicinesByPet(int pet_id)
+        {
+            Pet pet = _context.Pets.SingleOrDefault(p => p.PetId == pet_id);
+            if (pet.Medications.Count > 0)
+            {
+                return pet.Medications;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public void AddMedicationToPet(int pet_id, Medicine med)
+        {
+            Pet pet = _context.Pets.SingleOrDefault(p => p.PetId == pet_id);
+            pet.Medications.Add(med);
+            _context.Medicines.Add(med);
+            _context.SaveChanges();
+        }
+
+        public void RemoveMedicineFromPet(int pet_id, int med_id)
+        {
+            Pet pet = _context.Pets.SingleOrDefault(p => p.PetId == pet_id);
+            Medicine med = _context.Medicines.SingleOrDefault(m => m.MedicineId == med_id);
+            pet.Medications.Remove(med);
+            _context.Medicines.Remove(med);
+            _context.SaveChanges();
+        }
     }
 }

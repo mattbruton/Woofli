@@ -268,6 +268,52 @@ namespace woofli_be_v2._0.Tests.DAL
             Assert.IsNull(repo.GetVeterinarianByPetId(1));
             Assert.IsTrue(vets.Count == 1);
         }
+
+        [TestMethod]
+        public void RepoCanGetMedsFromPet()
+        {
+            IncludeMockData();
+            int expected_med_count = 1;
+            int actual_med_count = repo.GetMedicinesByPet(1).Count;
+
+            Assert.AreEqual(expected_med_count, actual_med_count);
+        }
+
+        [TestMethod]
+        public void RepoCanAddMedsToPet()
+        {
+            IncludeMockData();
+            Medicine new_med = new Medicine { Name = "New Med" };
+            repo.AddMedicationToPet(1, new_med);
+            int expected_med_count = 2;
+            int actual_med_count = repo.GetMedicinesByPet(1).Count;
+            Assert.AreEqual(expected_med_count, actual_med_count);
+            Assert.IsTrue(medicines.Count == 2);
+        }
+
+        [TestMethod]
+        public void RepoCanRemoveMedicineFromPetAndReturnNullIfLastMedInList()
+        {
+            IncludeMockData();
+            repo.RemoveMedicineFromPet(1, 2);
+            int expected_med_count = 0;
+            int actual_med_count = medicines.Count;
+            Assert.AreEqual(expected_med_count, actual_med_count);
+            Assert.IsNull(repo.GetMedicinesByPet(1));
+        }
+
+        [TestMethod]
+        public void RepoReturnsRestOfMedsIfOneRemovedOutOfMany()
+        {
+            IncludeMockData();
+            Medicine new_med = new Medicine { Name = "New Med" };
+            repo.AddMedicationToPet(1, new_med);
+            repo.RemoveMedicineFromPet(1, 2);
+            int expected_med_count = 1;
+            int actual_med_count = medicines.Count;
+            Assert.AreEqual(expected_med_count, actual_med_count);
+            Assert.IsTrue(repo.GetMedicinesByPet(1).Count == 1);
+        }
     }
 }
 
