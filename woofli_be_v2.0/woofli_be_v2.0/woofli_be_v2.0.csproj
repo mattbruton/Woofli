@@ -142,7 +142,7 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\OrdersController.cs" />
+    <Compile Include="Controllers\MedicineController.cs" />
     <Compile Include="Controllers\PetController.cs" />
     <Compile Include="Controllers\PetsitterController.cs" />
     <Compile Include="Controllers\VeterinarianController.cs" />
@@ -163,7 +163,6 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CustomUser.cs" />
     <Compile Include="Models\Medicine.cs" />
-    <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Pet.cs" />
     <Compile Include="Models\Petsitter.cs" />
     <Compile Include="Models\SitterAppointment.cs" />
