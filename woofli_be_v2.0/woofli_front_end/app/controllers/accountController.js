@@ -30,6 +30,10 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'vetS
         $location.path("/add-pet");
     };
 
+    $scope.goToNewMedView = function () {
+        $location.path("/add-med");
+    };
+
     $scope.goToTargetPetView = function (id) {
         $rootScope.id = id;
         $location.path(`/pet/${id}`);
