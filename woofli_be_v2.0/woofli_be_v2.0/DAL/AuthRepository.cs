@@ -109,5 +109,27 @@ namespace woofli_be_v2._0.DAL
             _context.Users.SingleOrDefault(u => u.UserName == username).Pets.Add(pet);
             _context.SaveChanges();
         }
+
+        public Veterinarian GetVeterinarianByPetId(int pet_id)
+        {
+            Pet pet = _context.Pets.SingleOrDefault(p => p.PetId == pet_id);
+            return pet.PrimaryVet;
+        }
+
+        public void AddVeterinarianToPetByPetId(int pet_id, Veterinarian vet)
+        {
+            Pet pet = _context.Pets.SingleOrDefault(p => p.PetId == pet_id);
+            _context.Veterinarians.Add(vet);
+            pet.PrimaryVet = vet;
+            _context.SaveChanges();
+        }
+
+        public void RemoveVeterinarianFromPet(int pet_id)
+        {
+            Pet pet = _context.Pets.SingleOrDefault(p => p.PetId == pet_id);
+            _context.Veterinarians.Remove(pet.PrimaryVet);
+            pet.PrimaryVet = null;
+            _context.SaveChanges();
+        }
     }
 }

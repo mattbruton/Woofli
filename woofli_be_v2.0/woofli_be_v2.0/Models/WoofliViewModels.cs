@@ -29,5 +29,23 @@ namespace woofli_be_v2._0.Models
             [Required]
             public string ImageUrl { get; set; }
         }
+
+        public class AddPrimaryVetViewModel
+        {
+            [Required]
+            public string ClinicName { get; set; }
+            [Required]
+            public string Phone { get; set; }
+            [Required]
+            public string StreetAddress { get; set; }
+            [Required]
+            public string City { get; set; }
+            [Required]
+            public string State { get; set; }
+            [Required]
+            public string ZipCode { get; set; }
+            [Required]
+            public int PetId { get; set; }
+        }
     }
 }
