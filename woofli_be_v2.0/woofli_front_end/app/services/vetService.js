@@ -17,9 +17,17 @@ app.factory('vetService', ['$http', function ($http) {
         $http.post(serviceBase + 'api/veterinarian/' + pet_id, data).then(function (results) {
             console.log(results);
         });
-    }
+    };
+
+    var _removeVetFromPet = function (pet_id) {
+        return $http.delete(serviceBase + 'api/veterinarian/' + pet_id).then(function (results) {
+            return results;
+        });
+    };
 
     vetServiceFactory.getPrimaryVet = _getPrimaryVet;
     vetServiceFactory.addPrimaryVet = _addPrimaryVet;
+    vetServiceFactory.removeVetFromPet = _removeVetFromPet;
+
     return vetServiceFactory;
 }]);

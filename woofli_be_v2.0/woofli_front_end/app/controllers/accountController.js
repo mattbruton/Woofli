@@ -79,6 +79,13 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'vetS
         });
     };
 
+    $scope.removeVet = function (id) {
+        vetService.removeVetFromPet(id).then(function (results) {
+            console.log(id);
+            $location.path(`/pet/${id}`);
+        });
+    };
+
     $scope.addNewVet = function (newVet) {
         $scope.newVet.PetId = $rootScope.id;
         vetService.addPrimaryVet($scope.newVet, $rootScope.id);
