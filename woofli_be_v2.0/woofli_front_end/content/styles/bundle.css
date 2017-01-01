@@ -39,6 +39,11 @@
     padding-top: 0.75vh;
     color: #fff;
     font-family: "Concert One"; }
+    .header--profile-card-dosage {
+      margin-top: 1vh;
+      padding-top: 0.75vh;
+      color: #fff;
+      font-family: "Concert One"; }
   .header--profile-title {
     padding-top: 0.75vh;
     color: dimgrey;
@@ -180,6 +185,12 @@
   margin-top: 1rem;
   padding: 1.5rem .75rem;
   box-shadow: 0 4px 2px -2px gray; }
+  .input-select {
+    margin-top: 1rem;
+    padding: 1.5rem .75rem;
+    box-shadow: 0 4px 2px -2px gray;
+    height: 4.35rem;
+    width: 100%; }
 
 .image {
   max-width: 50%; }

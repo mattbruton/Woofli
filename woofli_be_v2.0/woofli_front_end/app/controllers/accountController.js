@@ -8,6 +8,7 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'vetS
     $scope.targetPetsitter = {};
     $scope.targetVet = {};
 
+    $scope.newMed = {};
     $scope.newPet = {};
     $scope.newVet = {};
     $scope.newPetsitter = {};
