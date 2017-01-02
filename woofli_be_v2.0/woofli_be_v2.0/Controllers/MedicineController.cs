@@ -7,6 +7,7 @@ using System.Security.Claims;
 using System.Web.Http;
 using woofli_be_v2._0.DAL;
 using woofli_be_v2._0.Models;
+using static woofli_be_v2._0.Models.WoofliViewModels;
 
 namespace woofli_be_v2._0.Controllers
 {
@@ -56,8 +57,31 @@ namespace woofli_be_v2._0.Controllers
         }
 
         // POST api/<controller>
-        public void Post([FromBody]string value)
+        public Dictionary<string, bool> Post([FromBody]AddMedicationViewModel value)
         {
+            Dictionary<string, bool> answer = new Dictionary<string, bool>();
+
+            if (ModelState.IsValid)
+            {
+                Medicine new_med = new Medicine
+                {
+                    Name = value.Name,
+                    PrescriptionQuantity = value.PrescriptionQuantity,
+                    DoesPrescriptionGetRefill = value.DoesPrescriptionGetRefill,
+                    Dosage = value.Dosage,
+                    DosageInterval = value.DosageInterval,
+                    DosageIntervalUnit = value.DosageIntervalUnit,
+                    DosageUnit = value.DosageUnit,
+                    DosageTime = DateTime.Now
+                };
+                _repo.AddMedicationToPet(value.PetId, new_med);
+                answer.Add("successful", true);
+            }
+            else
+            {
+                answer.Add("successful", false);
+            }
+            return answer;
         }
 
         // PUT api/<controller>/5
