@@ -8,6 +8,7 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'vetS
     $scope.targetPetsitter = {};
     $scope.targetVet = {};
 
+    $scope.newMed = {};
     $scope.newPet = {};
     $scope.newVet = {};
     $scope.newPetsitter = {};
@@ -28,6 +29,10 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'vetS
 
     $scope.goToNewPetView = function () {
         $location.path("/add-pet");
+    };
+
+    $scope.goToNewMedView = function () {
+        $location.path("/add-med");
     };
 
     $scope.goToTargetPetView = function (id) {

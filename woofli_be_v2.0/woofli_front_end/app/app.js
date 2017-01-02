@@ -23,6 +23,9 @@ app.config(function ($routeProvider, $locationProvider) {
     }).when("/add-vet", {
         controller: "accountController",
         templateUrl: "/app/partials/add-vet.html"
+    }).when("/add-med", {
+        controller: "accountController",
+        templateUrl: "/app/partials/add-medication.html"
     }).when('/pet/:id', {
         controller: "accountController",
         templateUrl: "/app/partials/pet.html"
