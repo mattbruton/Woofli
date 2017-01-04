@@ -7,6 +7,14 @@
                 <h4 class="header--profile-card" data-ng-bind="targetMed.prescriptionQuantity"></h4>
             </div>
         </div>
+
+        <div class="container--vet-info col-xs-12 col-md-8 push-md-2">
+            <h4 class="header--profile-title col-xs-12 text-xs-center">Dosage Info</h4>
+            <div class="container--petsitter-info text-xs-center">
+                <h4 class="header--profile-card" data-ng-bind="targetMed.dosage + ' ' + targetMed.dosageUnit + ' every ' + targetMed.dosageInterval + ' ' + targetMed.dosageIntervalUnit "></h4>
+            </div>
+        </div>
+
         <div class="container--vet-info col-xs-12 col-md-8 push-md-2">
             <div class="container--petsitter-info-edit col-xs-4 push-xs-1">
                 <h4 class="header--profile-card text-xs-center">Edit</h4>
