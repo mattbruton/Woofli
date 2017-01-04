@@ -12,12 +12,21 @@ app.factory('medService', ['$http', function ($http) {
     };
 
     var _getSinglePetMed = function (pet_id, med_id) {
-        return $http.get(serviceBase + 'api/medicine/' + id + '/' + med_id).then(function (results) {
+        return $http.get(serviceBase + 'api/medicine/' + pet_id + '/' + med_id).then(function (results) {
             console.log(results);
             return results;
         });
     };
 
+    var _addMedToPet = function (med) {
+        var data = med;
+        $http.post(serviceBase + 'api/medicine/', data).then(function (results) {
+            console.log(results);
+            return results;
+        });
+    };
+
+    medServiceFactory.addMedToPet = _addMedToPet;
     medServiceFactory.getPetMeds = _getPetMeds;
     medServiceFactory.getSinglePetMed = _getSinglePetMed;
 
