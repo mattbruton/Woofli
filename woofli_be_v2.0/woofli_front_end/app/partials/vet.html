@@ -1,6 +1,15 @@
 ﻿<div data-ng-init="viewTargetVet(id)" class="container">
     <h1 class="col-xs-12 pet__header text-xs-center" data-ng-bind="targetVet.clinicName"></h1>
     <div class="container-fluid">
+
+        <div class="container--vet-info col-xs-12 col-md-8 push-md-2">
+            <h4 class="header--profile-title col-xs-12 text-xs-center">Address</h4>
+            <div class="container--petsitter-info text-xs-center">
+                <h4 class="header--profile-card" data-ng-bind="targetVet.streetAddress"></h4>
+                <h4 class="header--profile-card" data-ng-bind="targetVet.city + ', ' + targetVet.state + ' ' + targetVet.zipCode"></h4>
+            </div> 
+        </div>
+
         <div class="container--vet-info col-xs-12 col-md-8 push-md-2">
             <h4 class="header--profile-title col-xs-12 text-xs-center">Phone</h4>
             <div class="container--petsitter-info text-xs-center">
