@@ -15,7 +15,7 @@ app.factory('vetService', ['$http', function ($http) {
     var _addPrimaryVet = function (vet, pet_id) {
         var data = vet;
         $http.post(serviceBase + 'api/veterinarian/' + pet_id, data).then(function (results) {
-            console.log(results);
+            return(results);
         });
     };
 

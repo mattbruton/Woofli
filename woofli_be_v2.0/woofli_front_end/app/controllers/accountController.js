@@ -1,5 +1,5 @@
 ﻿'use strict';
-app.controller('accountController', ['$scope', '$location', 'authService', 'vetService', 'petService', 'petsitterService', '$rootScope', function ($scope, $location, authService, vetService, petService, petsitterService, $rootScope) {
+app.controller('accountController', ['$scope', '$location', 'authService', 'medService', 'vetService', 'petService', 'petsitterService', '$rootScope', function ($scope, $location, authService, medService, vetService, petService, petsitterService, $rootScope) {
 
     $scope.userPets = [];
     $scope.userPetsitters = [];
@@ -13,6 +13,7 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'vetS
     $scope.newVet = {};
     $scope.newPetsitter = {};
 
+    $scope.medId = $rootScope.medId;
     $scope.id = $rootScope.id;
 
     $scope.backToAccount = function () {
@@ -45,6 +46,11 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'vetS
         $location.path(`/vet/${id}`);
     };
 
+    $scope.goToTargetMedView = function (medId) {
+        $rootScope.medId = medId;
+        $location.path(`/med/${medId}`);
+    };
+
     $scope.goToTargetPetsitterView = function (id) {
         $rootScope.id = id;
         $location.path(`/petsitter/${id}`);
@@ -54,6 +60,13 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'vetS
         petService.getSinglePet(id).then(function (results) {
             $scope.targetPet = results.data;
             $scope.viewTargetVet($scope.id);
+        });
+    };
+
+    $scope.viewTargetMed = function (medId, petId) {
+        medService.getSinglePetMed(petId, medId).then(function (results) {
+            $scope.targetMed = results.data;
+            console.log($scope.targetMed);
         });
     };
 
@@ -94,6 +107,13 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'vetS
     $scope.addNewVet = function (newVet) {
         $scope.newVet.PetId = $rootScope.id;
         vetService.addPrimaryVet($scope.newVet, $rootScope.id);
+        $scope.updatePetList();
+        $location.path(`/pet/{{$rootScope.id}}`);
+    };
+
+    $scope.addNewMed = function (newMed) {
+        $scope.newMed.PetId = $rootScope.id;
+        medService.addMedToPet(newMed);
         $scope.updatePetList();
         $location.path(`/pet/{{$rootScope.id}}`);
     };

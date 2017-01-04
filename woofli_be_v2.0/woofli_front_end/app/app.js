@@ -35,6 +35,9 @@ app.config(function ($routeProvider, $locationProvider) {
     }).when('/vet/:id', {
         controller: "accountController",
         templateUrl: "/app/partials/vet.html"
+    }).when('/med/:id', {
+        controller: "accountController",
+        templateUrl: "/app/partials/med.html"
     }).otherwise({ redirectTo: "/" });
 
     $locationProvider.html5Mode(true);
