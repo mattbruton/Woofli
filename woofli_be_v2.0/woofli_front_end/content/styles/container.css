@@ -2,10 +2,10 @@
   padding-top: 1.5vh; }
 
 .container__form {
-  margin-top: 20vh; }
+  margin-top: 5vh; }
   @media only screen and (max-width: 767px) {
     .container__form {
-      margin-top: 15vh; } }
+      margin-top: 2.5vh; } }
 
 .container--pet {
   background-color: cadetblue;
