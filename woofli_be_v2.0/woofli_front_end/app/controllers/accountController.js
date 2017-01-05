@@ -90,6 +90,13 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'medS
         });
     };
 
+    $scope.removeMed = function (med_id) {
+        medService.removeMedFromPet(med_id).then(function () {
+            $scope.updatePetList();
+            $location.path(`/pet/{{$rootScope.id}}`);
+        });
+    };
+
     $scope.removePet = function (id) {
         petService.removeSinglePet(id).then(function (results) {
             $scope.updatePetList();
@@ -99,7 +106,6 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'medS
 
     $scope.removeVet = function (id) {
         vetService.removeVetFromPet(id).then(function (results) {
-            console.log(id);
             $location.path(`/pet/${id}`);
         });
     };

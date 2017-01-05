@@ -38,6 +38,18 @@ app.config(function ($routeProvider, $locationProvider) {
     }).when('/med/:id', {
         controller: "accountController",
         templateUrl: "/app/partials/med.html"
+    }).when('/edit/petsitter/:id', {
+        controller: "accountController",
+        templateUrl: "/app/partials/edit-petsitter.html"
+    }).when('/edit/pet/:id', {
+        controller: "accountController",
+        templateUrl: "/app/partials/edit-pet.html"
+    }).when('/edit/vet/:id', {
+        controller: "accountController",
+        templateUrl: "/app/partials/edit-vet.html"
+    }).when('/edit/med/:id', {
+        controller: "accountController",
+        templateUrl: "/app/partials/edit-med.html"
     }).otherwise({ redirectTo: "/" });
 
     $locationProvider.html5Mode(true);

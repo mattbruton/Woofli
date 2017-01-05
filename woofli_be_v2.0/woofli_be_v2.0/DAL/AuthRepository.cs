@@ -153,11 +153,10 @@ namespace woofli_be_v2._0.DAL
             _context.SaveChanges();
         }
 
-        public void RemoveMedicineFromPet(int pet_id, int med_id)
+        public void RemoveMedicineFromPet(int med_id)
         {
-            Pet pet = _context.Pets.SingleOrDefault(p => p.PetId == pet_id);
             Medicine med = _context.Medicines.SingleOrDefault(m => m.MedicineId == med_id);
-            pet.Medications.Remove(med);
+            
             _context.Medicines.Remove(med);
             _context.SaveChanges();
         }

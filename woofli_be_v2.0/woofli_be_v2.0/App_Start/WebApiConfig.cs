@@ -23,6 +23,12 @@ namespace woofli_be_v2._0
                 defaults: new { id = RouteParameter.Optional }
             );
 
+            config.Routes.MapHttpRoute(
+                name: "MedApi",
+                routeTemplate: "api/{controller}/{id}/{medicine_id}",
+                defaults: new { id = RouteParameter.Optional, medicine_id = RouteParameter.Optional }
+            );
+
             var jsonFormatter = config.Formatters.OfType<JsonMediaTypeFormatter>().First();
             jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
         }

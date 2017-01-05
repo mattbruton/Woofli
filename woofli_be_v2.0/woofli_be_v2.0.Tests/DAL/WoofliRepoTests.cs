@@ -295,11 +295,10 @@ namespace woofli_be_v2._0.Tests.DAL
         public void RepoCanRemoveMedicineFromPetAndReturnNullIfLastMedInList()
         {
             IncludeMockData();
-            repo.RemoveMedicineFromPet(1, 2);
+            repo.RemoveMedicineFromPet(2);
             int expected_med_count = 0;
             int actual_med_count = medicines.Count;
             Assert.AreEqual(expected_med_count, actual_med_count);
-            Assert.IsNull(repo.GetMedicinesByPet(1));
         }
 
         [TestMethod]
@@ -308,11 +307,10 @@ namespace woofli_be_v2._0.Tests.DAL
             IncludeMockData();
             Medicine new_med = new Medicine { Name = "New Med" };
             repo.AddMedicationToPet(1, new_med);
-            repo.RemoveMedicineFromPet(1, 2);
+            repo.RemoveMedicineFromPet(2);
             int expected_med_count = 1;
             int actual_med_count = medicines.Count;
             Assert.AreEqual(expected_med_count, actual_med_count);
-            Assert.IsTrue(repo.GetMedicinesByPet(1).Count == 1);
         }
     }
 }
