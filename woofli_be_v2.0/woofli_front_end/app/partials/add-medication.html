@@ -41,13 +41,13 @@
                         <h5 class="header--profile-card">Time</h5>
                         <div class="form-check">
                             <div class="col-xs-4">
-                                <input type="text" class="form-control input" placeholder="HH" data-ng-model="newMed.Dosage" required>
+                                <input type="text" class="form-control input" placeholder="HH" data-ng-model="medDateParams.Hour" required>
                             </div>
                             <div class="col-xs-4">
-                                <input type="text" class="form-control input" placeholder="mm" data-ng-model="newMed.Dosage" required>
+                                <input type="text" class="form-control input" placeholder="mm" data-ng-model="medDateParams.Minute" required>
                             </div>
                             <label class="form-check-label col-xs-4">
-                                <select class="input-select" data-ng-model="newMed.DosageIntervalUnit">
+                                <select class="input-select" data-ng-model="medDateParams.Meridiem">
                                     <option value="am">AM</option>
                                     <option value="pm">PM</option>
                                 </select>
@@ -58,13 +58,13 @@
                         <h5 class="header--profile-card">Date</h5>
                         <div class="form-check">
                             <div class="col-xs-4">
-                                <input type="text" class="form-control input" placeholder="Month" data-ng-model="newMed.Dosage" required>
+                                <input type="text" class="form-control input" placeholder="Month" data-ng-model="medDateParams.Month" required>
                             </div>
                             <div class="col-xs-4">
-                                <input type="text" class="form-control input" placeholder="Day" data-ng-model="newMed.Dosage" required>
+                                <input type="text" class="form-control input" placeholder="Day" data-ng-model="medDateParams.Day" required>
                             </div>
                             <label class="form-check-label col-xs-4">
-                                <select class="input-select" placeholder="Year" data-ng-model="newMed.DosageIntervalUnit">
+                                <select class="input-select" placeholder="Year" data-ng-model="medDateParams.Year">
                                     <option value="2017">2017</option>
                                     <option value="2018">2018</option>
                                     <option value="2019">2019</option>
@@ -93,7 +93,7 @@
             </div>
             
             <div class="text-xs-center btn--form-spacing">
-                <button class="btn btn-lg btn-primary" type="submit" data-ng-click="addNewMed(newMed)">Add Medication</button>
+                <button class="btn btn-lg btn-primary" type="submit" data-ng-click="configureTime(); addNewMed(newMed)">Add Medication</button>
             </div>
         </form>
         <span class="text-xs-center col-xs-8 push-xs-2 container--icon-data" data-ng-click="backToAccount()"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i><span class="spacing--back">Back to Account</span></span>
