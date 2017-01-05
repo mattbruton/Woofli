@@ -36,6 +36,48 @@
 
             <div class="container container--select-pet-type text-xs-center">
                 <fieldset class="form-group">
+                    <h4 class="header--profile-card">Schedule Next Dosage</h4>
+                    <div class="col-xs-12">
+                        <h5 class="header--profile-card">Time</h5>
+                        <div class="form-check">
+                            <div class="col-xs-4">
+                                <input type="text" class="form-control input" placeholder="HH" data-ng-model="newMed.Dosage" required>
+                            </div>
+                            <div class="col-xs-4">
+                                <input type="text" class="form-control input" placeholder="mm" data-ng-model="newMed.Dosage" required>
+                            </div>
+                            <label class="form-check-label col-xs-4">
+                                <select class="input-select" data-ng-model="newMed.DosageIntervalUnit">
+                                    <option value="am">AM</option>
+                                    <option value="pm">PM</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <h5 class="header--profile-card">Date</h5>
+                        <div class="form-check">
+                            <div class="col-xs-4">
+                                <input type="text" class="form-control input" placeholder="Month" data-ng-model="newMed.Dosage" required>
+                            </div>
+                            <div class="col-xs-4">
+                                <input type="text" class="form-control input" placeholder="Day" data-ng-model="newMed.Dosage" required>
+                            </div>
+                            <label class="form-check-label col-xs-4">
+                                <select class="input-select" placeholder="Year" data-ng-model="newMed.DosageIntervalUnit">
+                                    <option value="2017">2017</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="container container--select-pet-type text-xs-center">
+                <fieldset class="form-group">
                     <h4 class="header--profile-card">Does the medication get refilled?</h4>
                     <div class="form-check">
                         <label class="form-check-label col-xs-6">
