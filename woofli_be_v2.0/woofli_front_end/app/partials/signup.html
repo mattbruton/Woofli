@@ -8,6 +8,18 @@
             <input type="text" class="form-control input" placeholder="Username" data-ng-model="registration.userName" required autofocus>
             <input type="password" class="form-control input" placeholder="Password" data-ng-model="registration.password" required>
             <input type="password" class="form-control input" placeholder="Confirm Password" data-ng-model="registration.confirmPassword" required>
+            <input type="text" class="form-control input" placeholder="Email" data-ng-model="registration.Email" required />
+            <input type="text" class="form-control input" placeholder="Phone" data-ng-model="registration.PhoneNumber" required />
+            <div class="col-xs-12">
+                <h4 class="header--profile-card-dosage col-xs-12">Preferred Method of Contact</h4>
+                <div class="form-group">
+                    <select class="input-select" data-ng-model="registration.PrefersContactByPhone">
+                        <option value="true">Phone</option>
+                        <option value="false">Email</option>
+                    </select>
+                </div>
+            </div>
+
             <div class="text-xs-center btn--form-spacing">
                 <button class="btn btn-lg btn-primary" type="submit" data-ng-click="signUp()">Submit</button>
             </div>

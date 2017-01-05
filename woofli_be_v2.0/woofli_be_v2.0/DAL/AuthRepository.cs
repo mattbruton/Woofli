@@ -30,7 +30,10 @@ namespace woofli_be_v2._0.DAL
         {
             CustomUser user = new CustomUser
             {
-                UserName = userModel.UserName
+                UserName = userModel.UserName,
+                PhoneNumber = userModel.PhoneNumber,
+                Email = userModel.Email,
+                PrefersContactByPhone = userModel.PrefersContactByPhone
             };
 
             var result = await _userManager.CreateAsync(user, userModel.Password);
