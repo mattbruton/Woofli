@@ -91,8 +91,22 @@ namespace woofli_be_v2._0.Controllers
         }
 
         // DELETE api/<controller>/5
-        public void Delete(int id)
+        [Authorize]
+        [HttpDelete]
+        public Dictionary<string, bool> Delete(int id)
         {
+            Dictionary<string, bool> answer = new Dictionary<string, bool>();
+            if (_repo.GetAllPetsForUser(FindActiveUserName()).Any(p => p.Medications.SingleOrDefault(m => m.MedicineId == id) != null))
+            {
+                _repo.RemoveMedicineFromPet(id);
+                answer.Add("successful", true);
+                return answer;
+            }
+            else
+            {
+                answer.Add("successful", false);
+                return answer;
+            }
         }
     }
 }

@@ -26,9 +26,16 @@ app.factory('medService', ['$http', function ($http) {
         });
     };
 
+    var _removeMedFromPet = function (med_id) {
+        return $http.delete(serviceBase + 'api/medicine/' + med_id).then(function (results) {
+            return results;
+        });
+    };
+
     medServiceFactory.addMedToPet = _addMedToPet;
     medServiceFactory.getPetMeds = _getPetMeds;
     medServiceFactory.getSinglePetMed = _getSinglePetMed;
+    medServiceFactory.removeMedFromPet = _removeMedFromPet;
 
     return medServiceFactory;
 }]);

@@ -22,5 +22,12 @@ namespace woofli_be_v2._0.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        public string Email { get; set; }
+        [Required]
+        public string PhoneNumber { get; set; }
+        [Required]
+        public bool PrefersContactByPhone { get; set; }
     }
 }
