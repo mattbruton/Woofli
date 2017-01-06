@@ -16,13 +16,8 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'medS
     $scope.medDateParams = {};
 
     $scope.configureTime = function () {
-        $scope.medDate.setMinutes($scope.medDateParams.Minute -1);
-        $scope.medDate.setMonth($scope.medDateParams.Month - 1);
-        $scope.medDate.setDate($scope.medDateParams.Day);
-        $scope.medDate.setFullYear($scope.medDateParams.Year);
-
         if ($scope.medDateParams.Meridiem == "pm" && $scope.medDateParams.Hour != 12) {
-            $scope.medDateParams.Hour += 12;
+            $scope.medDateParams.Hour = parseInt($scope.medDateParams.Hour) + 12;
             $scope.medDate.setHours($scope.medDateParams.Hour);
         } else if ($scope.medDateParams.Meridiem == "am" && $scope.medDateParams.Hour == 12) {
             $scope.medDateParams.Hour = 0;
@@ -30,11 +25,13 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'medS
         } else {
             $scope.medDate.setHours($scope.medDateParams.Hour);
         }
+        $scope.medDate.setMinutes($scope.medDateParams.Minute);
+        $scope.medDate.setMonth($scope.medDateParams.Month - 1);
+        $scope.medDate.setDate($scope.medDateParams.Day);
+        $scope.medDate.setFullYear($scope.medDateParams.Year);
 
-        console.log($scope.medDate);
         $scope.newMed.DosageTime = $scope.medDate.toISOString();
     };
-
     // End date related mess.
 
     $scope.newPet = {};
