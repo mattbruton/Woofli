@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "woofli_be_v2.0.Tests", "woo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "woofli_front_end", "woofli_front_end\woofli_front_end.csproj", "{674F9FB9-2C43-40E4-96C4-518924CCF3BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "woofli_SMS", "woofli_SMS\woofli_SMS.csproj", "{F04A0646-0B17-45EE-A8EC-7261015F8F59}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{674F9FB9-2C43-40E4-96C4-518924CCF3BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{674F9FB9-2C43-40E4-96C4-518924CCF3BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{674F9FB9-2C43-40E4-96C4-518924CCF3BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F04A0646-0B17-45EE-A8EC-7261015F8F59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F04A0646-0B17-45EE-A8EC-7261015F8F59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F04A0646-0B17-45EE-A8EC-7261015F8F59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F04A0646-0B17-45EE-A8EC-7261015F8F59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

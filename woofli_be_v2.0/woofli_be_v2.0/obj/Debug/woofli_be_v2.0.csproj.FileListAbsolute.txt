@@ -106,8 +106,10 @@ Z:\mattbruton On My Mac\workspace\C-Sharp\WoofliCapstone\woofli_be_v2.0\woofli_b
 Z:\mattbruton On My Mac\workspace\C-Sharp\WoofliCapstone\woofli_be_v2.0\woofli_be_v2.0\bin\System.Web.Http.WebHost.xml
 Z:\mattbruton On My Mac\workspace\C-Sharp\WoofliCapstone\woofli_be_v2.0\woofli_be_v2.0\obj\Debug\woofli_be_v2.0.csprojResolveAssemblyReference.cache
 Z:\mattbruton On My Mac\workspace\C-Sharp\WoofliCapstone\woofli_be_v2.0\woofli_be_v2.0\obj\Debug\woofli_be_v2._0.Migrations.InitialCreate.resources
+Z:\mattbruton On My Mac\workspace\C-Sharp\WoofliCapstone\woofli_be_v2.0\woofli_be_v2.0\obj\Debug\woofli_be_v2._0.Migrations.PetWithVetMigration.resources
+Z:\mattbruton On My Mac\workspace\C-Sharp\WoofliCapstone\woofli_be_v2.0\woofli_be_v2.0\obj\Debug\woofli_be_v2._0.Migrations.PetWithVetMigration2.resources
+Z:\mattbruton On My Mac\workspace\C-Sharp\WoofliCapstone\woofli_be_v2.0\woofli_be_v2.0\obj\Debug\woofli_be_v2._0.Migrations.PetUpdate.resources
+Z:\mattbruton On My Mac\workspace\C-Sharp\WoofliCapstone\woofli_be_v2.0\woofli_be_v2.0\obj\Debug\woofli_be_v2._0.Migrations.RevertPet.resources
 Z:\mattbruton On My Mac\workspace\C-Sharp\WoofliCapstone\woofli_be_v2.0\woofli_be_v2.0\obj\Debug\woofli_be_v2.0.csproj.GenerateResource.Cache
 Z:\mattbruton On My Mac\workspace\C-Sharp\WoofliCapstone\woofli_be_v2.0\woofli_be_v2.0\obj\Debug\woofli_be_v2.0.dll
 Z:\mattbruton On My Mac\workspace\C-Sharp\WoofliCapstone\woofli_be_v2.0\woofli_be_v2.0\obj\Debug\woofli_be_v2.0.pdb
-Z:\mattbruton On My Mac\workspace\C-Sharp\WoofliCapstone\woofli_be_v2.0\woofli_be_v2.0\obj\Debug\woofli_be_v2._0.Migrations.PetWithVetMigration.resources
-Z:\mattbruton On My Mac\workspace\C-Sharp\WoofliCapstone\woofli_be_v2.0\woofli_be_v2.0\obj\Debug\woofli_be_v2._0.Migrations.PetWithVetMigration2.resources

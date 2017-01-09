@@ -163,5 +163,15 @@ namespace woofli_be_v2._0.DAL
             _context.Medicines.Remove(med);
             _context.SaveChanges();
         }
+
+        public List<Pet> GetAllPets()
+        {
+            return _context.Pets.ToList();
+        }
+
+        public List<CustomUser> GetAllUsers()
+        {
+            return _context.Users.ToList();
+        }
     }
 }

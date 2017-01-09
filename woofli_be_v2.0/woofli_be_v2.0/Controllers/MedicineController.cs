@@ -73,7 +73,7 @@ namespace woofli_be_v2._0.Controllers
                     DosageInterval = value.DosageInterval,
                     DosageIntervalUnit = value.DosageIntervalUnit,
                     DosageUnit = value.DosageUnit,
-                    DosageTime = DateTime.Now
+                    DosageTime = DateTime.Parse(value.DosageTime)
                 };
                 _repo.AddMedicationToPet(value.PetId, new_med);
                 answer.Add("successful", true);

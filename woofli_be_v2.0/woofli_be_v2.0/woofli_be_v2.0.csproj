@@ -160,6 +160,14 @@
     <Compile Include="Migrations\201612292343254_PetWithVetMigration2.Designer.cs">
       <DependentUpon>201612292343254_PetWithVetMigration2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701082030190_PetUpdate.cs" />
+    <Compile Include="Migrations\201701082030190_PetUpdate.Designer.cs">
+      <DependentUpon>201701082030190_PetUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701082036331_RevertPet.cs" />
+    <Compile Include="Migrations\201701082036331_RevertPet.Designer.cs">
+      <DependentUpon>201701082036331_RevertPet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CustomUser.cs" />
     <Compile Include="Models\Medicine.cs" />
@@ -194,6 +202,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612292343254_PetWithVetMigration2.resx">
       <DependentUpon>201612292343254_PetWithVetMigration2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701082030190_PetUpdate.resx">
+      <DependentUpon>201701082030190_PetUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701082036331_RevertPet.resx">
+      <DependentUpon>201701082036331_RevertPet.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

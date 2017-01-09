@@ -57,6 +57,7 @@ namespace woofli_be_v2._0.Models
             public int DosageInterval { get; set; }
             public string DosageIntervalUnit { get; set; }
             public int PrescriptionQuantity { get; set; }
+            public string DosageTime { get; set; }
             public int PetId { get; set; }
         }
     }
