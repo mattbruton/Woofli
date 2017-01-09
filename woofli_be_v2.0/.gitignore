@@ -9,6 +9,10 @@
 *.dll.config
 *.cache
 *.suo
+#######################
+Keys and stuff
+#######################
+./woofli_SMS/SecretKey.cs
 # Include dlls if they’re in the NuGet packages directory
 !/packages/*/lib/*.dll
 !/packages/*/lib/*/*.dll
