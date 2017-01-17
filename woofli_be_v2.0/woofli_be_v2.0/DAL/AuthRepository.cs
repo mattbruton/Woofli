@@ -173,5 +173,38 @@ namespace woofli_be_v2._0.DAL
         {
             return _context.Users.ToList();
         }
+
+        public void RemoveOneMedQty(int med_id)
+        {
+            Medicine med = _context.Medicines.SingleOrDefault(m => m.MedicineId == med_id);
+
+            if (med.PrescriptionQuantity > 0)
+            {
+                med.PrescriptionQuantity -= med.Dosage;
+            }
+
+            _context.SaveChanges();
+        }
+
+        public void ChangeDosageTime(int med_id, int interval, string interval_unit)
+        {
+            Medicine med = _context.Medicines.SingleOrDefault(m => m.MedicineId == med_id);
+            switch (interval_unit)
+            {
+                case "hours":
+                    med.DosageTime = med.DosageTime.AddHours(interval);
+                    break;
+                case "days":
+                    med.DosageTime = med.DosageTime.AddDays(interval);
+                    break;
+                case "months":
+                    med.DosageTime = med.DosageTime.AddMonths(interval);
+                    break;
+                case "years":
+                    med.DosageTime = med.DosageTime.AddYears(interval);
+                    break;
+            }
+            _context.SaveChanges();
+        }
     }
 }
