@@ -97,14 +97,12 @@ app.controller('accountController', ['$scope', '$location', 'authService', 'medS
     $scope.viewTargetMed = function (medId, petId) {
         medService.getSinglePetMed(petId, medId).then(function (results) {
             $scope.targetMed = results.data;
-            console.log($scope.targetMed);
         });
     };
 
     $scope.viewTargetVet = function (id) {
         vetService.getPrimaryVet(id).then(function (results) {
             $scope.targetVet = results.data;
-            console.log($scope.targetVet);
         });
     };
 
