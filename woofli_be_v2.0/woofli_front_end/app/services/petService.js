@@ -1,23 +1,21 @@
 ﻿'use strict';
-app.factory('petService', ['$http', function ($http) {
-
-    var serviceBase = 'http://localhost:52380/';
-    var petServiceFactory = {};
-
-    var _getPets = function () {
-
-        return $http.get(serviceBase + 'api/pet').then(function (results) {
+app.factory('PetFactory', ['$http', function ($http) {
+    const serviceBase = 'http://localhost:52380/';
+    const getPets = () => {
+        return $http.get(serviceBase + 'api/pet')
+        .then( (results) => {
             return results;
         });
     };
 
-    var _getSinglePet = function (id) {
-        return $http.get(serviceBase + 'api/pet/' + id).then(function (results) {
+    const getSinglePet = (id) => {
+        return $http.get(serviceBase + 'api/pet/' + id)
+        .then( (results) => {
             return results;
         });
     };
 
-    var _addNewPet = function (pet) {
+    const addNewPet = (pet) => {
         var data = pet;
         if (data.IsCanine)
         {
@@ -26,21 +24,25 @@ app.factory('petService', ['$http', function ($http) {
         else {
             data.ImageUrl = "content/images/cat-icon.png";
         }
-        $http.post(serviceBase + 'api/pet', data).then(function (results) {
+        $http.post(serviceBase + 'api/pet', data)
+        .then( (results) => {
             console.log(results);
         });
     };
 
-    var _removeSinglePet = function (id) {
-        return $http.delete(serviceBase + 'api/pet/' + id).then(function (results) {
+    const removeSinglePet = (id) => {
+        return $http.delete(serviceBase + 'api/pet/' + id)
+        .then( (results) => {
             return results;
         });
     };
 
-    petServiceFactory.getPets = _getPets;
-    petServiceFactory.getSinglePet = _getSinglePet;
-    petServiceFactory.removeSinglePet = _removeSinglePet;
-    petServiceFactory.addNewPet = _addNewPet;
+    return {
+      getPets,
+      getSinglePet,
+      removeSinglePet,
+      addNewPet
+    };
 
     return petServiceFactory;
 }]);
